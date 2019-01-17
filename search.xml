@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Source</title>
+      <link href="/2019/01/17/source/"/>
+      <url>/2019/01/17/source/</url>
+      
+        <content type="html"><![CDATA[<h2 id="springMVC-源码自探"><a href="#springMVC-源码自探" class="headerlink" title="springMVC 源码自探"></a>springMVC 源码自探</h2><p><img src="http://ww1.sinaimg.cn/large/006Cwrd9gy1fxskn2tpksj31hc0u0guq.jpg" alt="I love it when a plan comes together."></p><h3 id="弄清楚springMVC对我们写rest接口有莫大的好处"><a href="#弄清楚springMVC对我们写rest接口有莫大的好处" class="headerlink" title="弄清楚springMVC对我们写rest接口有莫大的好处"></a>弄清楚springMVC对我们写rest接口有莫大的好处</h3><p><strong>说明：其实和springMVC绑定在一起的内容还有这些：</strong></p><ol><li>http的知识</li><li>消息转化</li><li>拦截器的实现原理</li><li>其他，如消息监控的植入acutor</li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>QuickSort Application in java</title>
+      <link href="/2018/11/25/quicksort/"/>
+      <url>/2018/11/25/quicksort/</url>
+      
+        <content type="html"><![CDATA[<h2 id="QuickSort-Introduction"><a href="#QuickSort-Introduction" class="headerlink" title="QuickSort Introduction"></a>QuickSort Introduction</h2><p>  java的快速排序是基于分治的思想</p><p><img src="http://ww1.sinaimg.cn/large/006Cwrd9gy1fxskn2tpksj31hc0u0guq.jpg" alt="I love it when a plan comes together."></p><pre><code>java中的Arrays.Sort()方法是我们常用的排序方法，大家肯定点进去源码里面看过的，这里的东西还是蛮多的，性能也是综合考虑过的，里面涉及许多经典排序，还有比较著名的timSort，取这些排序的优点，综合运用，一起组成了java的快排序，当然这里的排序一定还在继续进化。逐步趋于完美。</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Algorithm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
