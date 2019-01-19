@@ -4,13 +4,27 @@
   
     
     <entry>
-      <title>Source</title>
+      <title>springMVC 源码自探</title>
       <link href="/2019/01/17/source/"/>
       <url>/2019/01/17/source/</url>
       
-        <content type="html"><![CDATA[<h2 id="springMVC-源码自探"><a href="#springMVC-源码自探" class="headerlink" title="springMVC 源码自探"></a>springMVC 源码自探</h2><p><img src="http://ww1.sinaimg.cn/large/006Cwrd9gy1fxskn2tpksj31hc0u0guq.jpg" alt="I love it when a plan comes together."></p><h3 id="弄清楚springMVC对我们写rest接口有莫大的好处"><a href="#弄清楚springMVC对我们写rest接口有莫大的好处" class="headerlink" title="弄清楚springMVC对我们写rest接口有莫大的好处"></a>弄清楚springMVC对我们写rest接口有莫大的好处</h3><p><strong>说明：其实和springMVC绑定在一起的内容还有这些：</strong></p><ol><li>http的知识</li><li>消息转化</li><li>拦截器的实现原理</li><li>其他，如消息监控的植入acutor</li></ol>]]></content>
+        <content type="html"><![CDATA[<h2 id="springMVC-源码自探"><a href="#springMVC-源码自探" class="headerlink" title="springMVC 源码自探"></a>springMVC 源码自探</h2><p><img src="http://ww1.sinaimg.cn/large/006Cwrd9gy1fxskn2tpksj31hc0u0guq.jpg" alt="I love it when a plan comes together."></p><h3 id="弄清楚springMVC对我们写rest接口有莫大的好处"><a href="#弄清楚springMVC对我们写rest接口有莫大的好处" class="headerlink" title="弄清楚springMVC对我们写rest接口有莫大的好处"></a>弄清楚springMVC对我们写rest接口有莫大的好处</h3><p><strong>说明：其实和springMVC绑定在一起的内容还有这些：</strong></p><ol><li>http的知识</li><li>消息转化</li><li>拦截器的实现原理</li><li>其他，如消息监控的植入actuator,zipkin等。</li></ol>]]></content>
       
       
+      <categories>
+          
+          <category> springMVC </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 源码 </tag>
+            
+            <tag> springMVC </tag>
+            
+        </tags>
       
     </entry>
     
@@ -21,8 +35,14 @@
       <link href="/2018/11/25/quicksort/"/>
       <url>/2018/11/25/quicksort/</url>
       
-        <content type="html"><![CDATA[<h2 id="QuickSort-Introduction"><a href="#QuickSort-Introduction" class="headerlink" title="QuickSort Introduction"></a>QuickSort Introduction</h2><p>  java的快速排序是基于分治的思想</p><p><img src="http://ww1.sinaimg.cn/large/006Cwrd9gy1fxskn2tpksj31hc0u0guq.jpg" alt="I love it when a plan comes together."></p><pre><code>java中的Arrays.Sort()方法是我们常用的排序方法，大家肯定点进去源码里面看过的，这里的东西还是蛮多的，性能也是综合考虑过的，里面涉及许多经典排序，还有比较著名的timSort，取这些排序的优点，综合运用，一起组成了java的快排序，当然这里的排序一定还在继续进化。逐步趋于完美。</code></pre>]]></content>
+        <content type="html"><![CDATA[<h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p><strong>对各种<em>基本排序</em>有些了解的人都会知道，各种单一的排序都有他自己合适的使用场景，快速排序是综合表现最好的。<br>而实际应用中的排序可要考虑的实在是太多了，看jdk的排序是怎么做的</strong><br><img src="http://ww1.sinaimg.cn/large/006Cwrd9gy1fxskn2tpksj31hc0u0guq.jpg" alt="I love it when a plan comes together."></p><pre><code>java中的Arrays.Sort()方法是我们常用的排序方法，有心的人肯定点进去源码里面看过的，随着jdk的变化这个排序也有持续的变动，说明维护的人还是很愿意花精力在这个方法上的，特别是jdk1.8的Arrays.Sort()，对一些基本算法没有足够了解的人看起来还是很吃力的(我说的是以前的我)，我花了点时间整理下这个算法。</code></pre><h3 id="涉及的算法和思路"><a href="#涉及的算法和思路" class="headerlink" title="涉及的算法和思路"></a>涉及的算法和思路</h3>]]></content>
       
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
       
       
         <tags>

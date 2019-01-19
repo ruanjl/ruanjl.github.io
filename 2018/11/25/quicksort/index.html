@@ -6,10 +6,8 @@
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <meta name="keywords" content="QuickSort Application in java, jlruan&#39;s blog">
-    <meta name="description" content="QuickSort Introduction  java的快速排序是基于分治的思想
-
-java中的Arrays.Sort()方法是我们常用的排序方法，大家肯定点进去源码里面看过的，这里的东西
-还是蛮多的，性能也是综合考虑过的，里面涉及许多经">
+    <meta name="description" content="前言：对各种基本排序有些了解的人都会知道，各种单一的排序都有他自己合适的使用场景，快速排序是综合表现最好的。而实际应用中的排序可要考虑的实在是太多了，看jdk的排序是怎么做的
+java中的Arrays.Sort()方法是我们常用的排序方法，">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -310,6 +308,16 @@ java中的Arrays.Sort()方法是我们常用的排序方法，大家肯定点进
             
             <div class="post-info">
                 
+                <span class="post-cate">
+                <!--<span class="post-cate" style="margin-right: 0px">-->
+                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                    
+                    <a href="/categories/算法/" class="post-category" target="_blank">
+                        算法
+                    </a>
+                    
+                </span>
+                
 
                 <span class="post-date">
                     <i class="fa fa-clock-o fa-fw"></i>2018-11-25
@@ -324,12 +332,11 @@ java中的Arrays.Sort()方法是我们常用的排序方法，大家肯定点进
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="QuickSort-Introduction"><a href="#QuickSort-Introduction" class="headerlink" title="QuickSort Introduction"></a>QuickSort Introduction</h2><p>  java的快速排序是基于分治的思想</p>
-<p><img src="http://ww1.sinaimg.cn/large/006Cwrd9gy1fxskn2tpksj31hc0u0guq.jpg" alt="I love it when a plan comes together."></p>
-<pre><code>java中的Arrays.Sort()方法是我们常用的排序方法，大家肯定点进去源码里面看过的，这里的东西
-还是蛮多的，性能也是综合考虑过的，里面涉及许多经典排序，还有比较著名的timSort，取这些排序
-的优点，综合运用，一起组成了java的快排序，当然这里的排序一定还在继续进化。逐步趋于完美。
-</code></pre>
+                <h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p><strong>对各种<em>基本排序</em>有些了解的人都会知道，各种单一的排序都有他自己合适的使用场景，快速排序是综合表现最好的。<br>而实际应用中的排序可要考虑的实在是太多了，看jdk的排序是怎么做的</strong><br><img src="http://ww1.sinaimg.cn/large/006Cwrd9gy1fxskn2tpksj31hc0u0guq.jpg" alt="I love it when a plan comes together."></p>
+<pre><code>java中的Arrays.Sort()方法是我们常用的排序方法，有心的人肯定点进去源码里面看过的，随着jdk的变化
+这个排序也有持续的变动，说明维护的人还是很愿意花精力在这个方法上的，特别是jdk1.8的Arrays.Sort()，
+对一些基本算法没有足够了解的人看起来还是很吃力的(我说的是以前的我)，我花了点时间整理下这个算法。
+</code></pre><h3 id="涉及的算法和思路"><a href="#涉及的算法和思路" class="headerlink" title="涉及的算法和思路"></a>涉及的算法和思路</h3>
             </div>
             <hr>
 
@@ -495,9 +502,9 @@ java中的Arrays.Sort()方法是我们常用的排序方法，大家肯定点进
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Source">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="springMVC 源码自探">
                         
-                        <span class="card-title">Source</span>
+                        <span class="card-title">springMVC 源码自探</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -507,20 +514,34 @@ java中的Arrays.Sort()方法是我们常用的排序方法，大家肯定点进
 http的知识
 消息转化
 拦截器的实现原理
-其他，如消息监控的植入acutor
-
-</div>
+其他，如消息监控的植入actuator,zipki</div>
                     <div class="publish-info">
                         <span class="publish-date">
                             <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-17
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fa fa-user fa-fw"></i>
-                            jl ruan
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/springMVC/" class="post-category" target="_blank">
+                                    springMVC
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/源码/" target="_blank">
+                        <span class="chip bg-color">源码</span>
+                    </a>
+                    
+                    <a href="/tags/springMVC/" target="_blank">
+                        <span class="chip bg-color">springMVC</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -540,18 +561,20 @@ http的知识
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">QuickSort Introduction  java的快速排序是基于分治的思想
-
-java中的Arrays.Sort()方法是我们常用的排序方法，大家肯定点进去源码里面看过的，这里的东西
-还是蛮多的，性能也是综合考虑过的，里面涉及许多经</div>
+                    <div class="summary">前言：对各种基本排序有些了解的人都会知道，各种单一的排序都有他自己合适的使用场景，快速排序是综合表现最好的。而实际应用中的排序可要考虑的实在是太多了，看jdk的排序是怎么做的
+java中的Arrays.Sort()方法是我们常用的排序方法，</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2018-11-25
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fa fa-user fa-fw"></i>
-                            jl ruan
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/算法/" class="post-category" target="_blank">
+                                    算法
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -573,6 +596,43 @@ java中的Arrays.Sort()方法是我们常用的排序方法，大家肯定点进
 </article>
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + 'From: jlruan's blog<br />'
+            + 'Author: jl ruan<br />'
+            + 'Link: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
     
 
