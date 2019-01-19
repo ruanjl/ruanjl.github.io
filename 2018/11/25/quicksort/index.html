@@ -360,20 +360,12 @@ java中的Arrays.Sort()方法是我们常用的排序方法">
 </li>
 <li>大量：先分用timSort分析数据本身排序状况，<ul>
 <li>衡量指标：run(单调升降序长度)和runs(归并次数)</li>
-<li>结构化可以就用归并，否则就用快排归并</li>
+<li>满足对应的常量要求就用归并，否则就用快排</li>
 </ul>
 </li>
 </ol>
 <h3 id="具体代码-jdk1-8"><a href="#具体代码-jdk1-8" class="headerlink" title="具体代码(jdk1.8)"></a>具体代码(jdk1.8)</h3><pre class=" language-java"><code class="language-java">    <span class="token comment" spellcheck="true">/**
-     * Sorts the specified range of the array using the given
-     * workspace array slice if possible for merging
-     *
-     * @param a the array to be sorted
-     * @param left the index of the first element, inclusive, to be sorted
-     * @param right the index of the last element, inclusive, to be sorted
-     * @param work a workspace array (slice)
-     * @param workBase origin of usable space in work array
-     * @param workLen usable size of work array
+     * 将给定区间片段的数组排序，如果可以的话是使用归并排序
      */</span>
     <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">sort</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> left<span class="token punctuation">,</span> <span class="token keyword">int</span> right<span class="token punctuation">,</span>
                          <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> work<span class="token punctuation">,</span> <span class="token keyword">int</span> workBase<span class="token punctuation">,</span> <span class="token keyword">int</span> workLen<span class="token punctuation">)</span> <span class="token punctuation">{</span>
