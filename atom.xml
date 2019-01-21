@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>runJ0</title>
+  <title>江0</title>
   
   <subtitle>RJL</subtitle>
   <link href="/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>https://github.com/ruanjl/</id>
   
   <author>
-    <name>runJ0</name>
+    <name>江0</name>
     
   </author>
   

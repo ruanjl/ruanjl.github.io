@@ -5,7 +5,7 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="springMVC 源码自探, runJ0">
+    <meta name="keywords" content="springMVC 源码自探, 江0">
     <meta name="description" content="springMVC 源码自探
 弄清楚springMVC对我们写rest接口有莫大的好处说明：其实和springMVC绑定在一起的内容还有这些：
 
@@ -20,7 +20,7 @@ http的知识
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>springMVC 源码自探 | runJ0</title>
+    <title>springMVC 源码自探 | 江0</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -47,7 +47,7 @@ http的知识
                         
                         <img src="/medias/logo.png" class="logo-img hide-on-small-only">
                         
-                        <span class="logo-span">runJ0</span>
+                        <span class="logo-span">江0</span>
                     </a>
                 </div>
                 
@@ -123,7 +123,7 @@ http的知识
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">runJ0</div>
+        <div class="logo-name">江0</div>
         <div class="logo-desc">
             
             I would rather make a mistake than to miss it.
@@ -192,7 +192,7 @@ http的知识
         
         <li><div class="divider"></div></li>
         <li>
-            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+            <a href="https://github.com/ruanjl/ruanjl.github.io" class="waves-effect waves-light" target="_blank">
                 <i class="fa fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
@@ -264,7 +264,7 @@ http的知识
     }
 </style>
 
-<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank" data-tooltip="Fork Me" data-position="left" data-delay="50">
+<a href="https://github.com/ruanjl/ruanjl.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank" data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewbox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/>
         <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/>
@@ -275,6 +275,19 @@ http的知识
     </nav>
 </header>
 
+
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
 
 
 
@@ -368,7 +381,7 @@ http的知识
             <div class="reprint">
                 <p>
                     <span class="reprint-tip">Reprint please specify: </span>
-                    <a href="https://github.com/ruanjl" class="b-link-green">runJ0</a>
+                    <a href="https://github.com/ruanjl" class="b-link-green">江0</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
                     <a href="/2019/01/17/source/" class="b-link-green">springMVC 源码自探</a>
                 </p>
@@ -543,8 +556,8 @@ java中的Arrays.Sort()方法是我们常用的排序方法</div>
 
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
-            + 'From: runJ0<br />'
-            + 'Author: runJ0<br />'
+            + 'From: 江0<br />'
+            + 'Author: 江0<br />'
             + 'Link: <a href="' + url + '">' + url + '</a><br />'
             + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
 
