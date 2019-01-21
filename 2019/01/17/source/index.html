@@ -5,7 +5,7 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="springMVC 源码自探, jlruan&#39;s blog">
+    <meta name="keywords" content="springMVC 源码自探, runJ0">
     <meta name="description" content="springMVC 源码自探
 弄清楚springMVC对我们写rest接口有莫大的好处说明：其实和springMVC绑定在一起的内容还有这些：
 
@@ -20,7 +20,7 @@ http的知识
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>springMVC 源码自探 | jlruan&#39;s blog</title>
+    <title>springMVC 源码自探 | runJ0</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -47,7 +47,7 @@ http的知识
                         
                         <img src="/medias/logo.png" class="logo-img hide-on-small-only">
                         
-                        <span class="logo-span">jlruan's blog</span>
+                        <span class="logo-span">runJ0</span>
                     </a>
                 </div>
                 
@@ -123,7 +123,7 @@ http的知识
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">jlruan's blog</div>
+        <div class="logo-name">runJ0</div>
         <div class="logo-desc">
             
             I would rather make a mistake than to miss it.
@@ -368,7 +368,7 @@ http的知识
             <div class="reprint">
                 <p>
                     <span class="reprint-tip">Reprint please specify: </span>
-                    <a href="https://github.com/ruanjl" class="b-link-green">jlruan's blog</a>
+                    <a href="https://github.com/ruanjl" class="b-link-green">runJ0</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
                     <a href="/2019/01/17/source/" class="b-link-green">springMVC 源码自探</a>
                 </p>
@@ -376,6 +376,28 @@ http的知识
         </div>
     </div>
 
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '1333e0adc15b0b08e871',
+        clientSecret: '1ff294afe0ae8d1f2100248d107b99ec975c8013',
+        repo: 'ruanjl.github.io',
+        owner: 'ruanjl',
+        admin: ["ruanjl"],
+        id: '2019-01-17T15-28-30',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
     
 
     
@@ -521,8 +543,8 @@ java中的Arrays.Sort()方法是我们常用的排序方法</div>
 
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
-            + 'From: jlruan's blog<br />'
-            + 'Author: jl ruan<br />'
+            + 'From: runJ0<br />'
+            + 'Author: runJ0<br />'
             + 'Link: <a href="' + url + '">' + url + '</a><br />'
             + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
 
