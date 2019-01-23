@@ -5,10 +5,10 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="限流方案对比, 江0">
-    <meta name="description" content="广为流传的接口限流方案漏斗桶如果将请求比作是水，水来了都先放进桶里，并以限定的速度出水，桶满会溢出，体现为拒绝服务。漏斗有一个进水口和一个出水口，出水口以一定速率出水，并且有一个最大出水速率。在漏斗中没有水的时候，
-
-如果进水速率小于等于最">
+    <meta name="keywords" content="究竟应该怎么实现分布式锁？, 江0">
+    <meta name="description" content="
+背景前几天突然接到任务说要实现一个分布式锁，由于之前有自己实现过一些demo，对各种分布式锁也都有一定的了解，实现的时候会数量一些，但是毕竟是公司直接要拿来用的东西，反复斟酌后才把初期的方案定了下来。
+常用的分布式锁简介基于redis的分">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>限流方案对比 | 江0</title>
+    <title>究竟应该怎么实现分布式锁？ | 江0</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -288,13 +288,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        限流方案对比
+                        究竟应该怎么实现分布式锁？
                     </div>
                 </div>
             </div>
@@ -334,7 +334,7 @@
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2019-01-21
+                    <i class="fa fa-clock-o fa-fw"></i>2019-01-22
                 </span>
 				
 				
@@ -346,69 +346,22 @@
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="广为流传的接口限流方案"><a href="#广为流传的接口限流方案" class="headerlink" title="广为流传的接口限流方案"></a>广为流传的接口限流方案</h2><h3 id="漏斗桶"><a href="#漏斗桶" class="headerlink" title="漏斗桶"></a>漏斗桶</h3><p>如果将请求比作是水，水来了都先放进桶里，并以限定的速度出水，桶满会溢出，体现为拒绝服务。<br>漏斗有一个进水口和一个出水口，出水口以一定速率出水，并且有一个最大出水速率。<br>在漏斗中没有水的时候，</p>
+                <p><img src="http://ww1.sinaimg.cn/large/006Cwrd9gy1fzfs9sj3xkj31hc0u07de.jpg" alt=""></p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>前几天突然接到任务说要实现一个分布式锁，由于之前有自己实现过一些demo，对各种分布式锁也都有一定的了解，<br>实现的时候会数量一些，但是毕竟是公司直接要拿来用的东西，反复斟酌后才把初期的方案定了下来。</p>
+<h3 id="常用的分布式锁简介"><a href="#常用的分布式锁简介" class="headerlink" title="常用的分布式锁简介"></a>常用的分布式锁简介</h3><p>基于redis的分布式锁</p>
 <ul>
-<li>如果进水速率小于等于最大出水速率，那么，出水速率等于进水速率，不会积水</li>
-<li>如果进水速率大于最大出水速率，漏斗会以最大速率出水，此时，多余的水会积在漏斗中<br>在漏斗中有水的时候</li>
-<li>出水口以最大速率出水</li>
-<li>如果漏斗未满，且有进水的话，那么这些水会积在漏斗中</li>
-<li><p>如果漏斗已满，且有进水的话，那么这些水会溢出到漏斗之外<br><img src="http://ww1.sinaimg.cn/large/006Cwrd9ly1fy4wszq4y5j31hc0u0thv.jpg" alt=""></p>
-<h3 id="桶令牌"><a href="#桶令牌" class="headerlink" title="桶令牌"></a>桶令牌</h3><p>对于很多应用场景来说，其实除了要求能够限制数据的平均传输速率外，还要应该求允许某种程度的突发传输。那么漏桶算法就无法满足，令牌桶算法更为适合。<br>令牌桶算法的原理是系统以恒定的速率产生令牌，然后把令牌放到令牌桶中，令牌桶有一个容量，当令牌桶满了的时候，再向其中放令牌，那么多余的令牌会被丢弃；<br>当想要处理一个请求的时候，需要从令牌桶中取出一个令牌，如果此时令牌桶中没有令牌，那么则拒绝该请求。</p>
-<h4 id="RateLimiter-用法"><a href="#RateLimiter-用法" class="headerlink" title="RateLimiter 用法"></a>RateLimiter 用法</h4><h4 id="google的guava包"><a href="#google的guava包" class="headerlink" title="google的guava包"></a><a href="https://github.com/google/guava">google的guava包</a></h4><pre class=" language-java"><code class="language-java">  <span class="token comment" spellcheck="true">// 测试一下</span>
-  <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span> <span class="token punctuation">{</span>
-
-      <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          ListeningExecutorService executorService <span class="token operator">=</span> MoreExecutors<span class="token punctuation">.</span><span class="token function">listeningDecorator</span><span class="token punctuation">(</span>Executors<span class="token punctuation">.</span><span class="token function">newFixedThreadPool</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token comment" spellcheck="true">// 指定每秒放1个令牌</span>
-          RateLimiter limiter <span class="token operator">=</span> RateLimiter<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">50</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-              <span class="token comment" spellcheck="true">// 请求RateLimiter, 超过permits会被阻塞</span>
-              <span class="token comment" spellcheck="true">//acquire(int permits)函数主要用于获取permits个令牌，并计算需要等待多长时间，进而挂起等待，并将该值返回</span>
-                Double acquire <span class="token operator">=</span> null<span class="token punctuation">;</span>
-              <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                  acquire <span class="token operator">=</span> limiter<span class="token punctuation">.</span><span class="token function">acquire</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-              <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                  acquire <span class="token operator">=</span> limiter<span class="token punctuation">.</span><span class="token function">acquire</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-              <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                  acquire <span class="token operator">=</span> limiter<span class="token punctuation">.</span><span class="token function">acquire</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-              <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                  acquire <span class="token operator">=</span> limiter<span class="token punctuation">.</span><span class="token function">acquire</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-              <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-                  acquire <span class="token operator">=</span> limiter<span class="token punctuation">.</span><span class="token function">acquire</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-              <span class="token punctuation">}</span>
-              executorService<span class="token punctuation">.</span><span class="token function">submit</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Task</span><span class="token punctuation">(</span><span class="token string">"获取令牌成功，获取耗："</span> <span class="token operator">+</span> acquire <span class="token operator">+</span> <span class="token string">" 第 "</span> <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token string">" 个任务执行"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-          <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-  <span class="token keyword">class</span> <span class="token class-name">Task</span> <span class="token keyword">implements</span> <span class="token class-name">Runnable</span> <span class="token punctuation">{</span>
-      String str<span class="token punctuation">;</span>
-      <span class="token keyword">public</span> <span class="token function">Task</span><span class="token punctuation">(</span>String str<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          <span class="token keyword">this</span><span class="token punctuation">.</span>str <span class="token operator">=</span> str<span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-      <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          SimpleDateFormat sdf <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SimpleDateFormat</span><span class="token punctuation">(</span><span class="token string">"yyyy-MM-dd HH:mm:ss.SSS"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-          System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>sdf<span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" | "</span> <span class="token operator">+</span> Thread<span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> str<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-</code></pre>
-<p>acquire函数主要用于获取permits个令牌，并计算需要等待多长时间，进而挂起等待，并将该值返回<br>一个RateLimiter主要定义了发放permits的速率。如果没有额外的配置，permits将以固定的速度分配，单位是每秒多少permits。默认情况下，Permits将会被稳定的平缓的发放。</p>
-<h3 id="令牌桶算法VS漏桶算法"><a href="#令牌桶算法VS漏桶算法" class="headerlink" title="令牌桶算法VS漏桶算法"></a>令牌桶算法VS漏桶算法</h3><p>漏桶</p>
-</li>
-<li>漏桶的出水速度是恒定的，那么意味着如果瞬时大流量的话，将有大部分请求被丢弃掉（也就是所谓的溢出）。<br>令牌桶</li>
-<li>生成令牌的速度是恒定的，而请求去拿令牌是没有速度限制的。这意味，面对瞬时大流量，该算法可以在短时间内请求拿到大量令牌，而且拿令牌的过程并不是消耗很大的事情。</li>
+<li>使用setNX的方式</li>
+<li>直接使用redis官方的redission已经实现好的redLock</li>
 </ul>
-<h2 id="还有那些简单易懂的"><a href="#还有那些简单易懂的" class="headerlink" title="还有那些简单易懂的?"></a>还有那些简单易懂的?</h2><p>限流方案有很多他们有各自的使用场景，下面看两个有关key的限流</p>
-<h3 id="环形窗口"><a href="#环形窗口" class="headerlink" title="环形窗口"></a>环形窗口</h3><h4 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h4><ul>
-<li>用定时任务维护一个环，头结点走完一周的时间是指定的窗口时间</li>
-<li>每次访问key或者接口的时候见时间戳放入环内，头结点碰到的节点都会充值<br>####</li>
-<li>优势可以异步维护各自的key的访问量，而不用主线程每次去判断</li>
-<li><h3 id="定制窗口"><a href="#定制窗口" class="headerlink" title="定制窗口"></a>定制窗口</h3></li>
-<li>每次请求记录时间戳，查看当前窗口内的节点数目，并将窗口外的节点删除</li>
-<li>每次请求先该key对应的节点数量少于指定的可以直接进入请求</li>
-<li>代码简单逻辑清晰容易实现</li>
+<p>基于zookeeper的分布式锁</p>
+<ul>
+<li>利用zookeeper的顺序临时节点，自旋比较自己的节点是否是节点里的最小值，来获得锁。</li>
 </ul>
-
+<p>基于etcd的分布式锁</p>
+<ul>
+<li>原理与zookeeper类似</li>
+</ul>
+<h3 id="基于redis分布式锁的具体方案及细节"><a href="#基于redis分布式锁的具体方案及细节" class="headerlink" title="基于redis分布式锁的具体方案及细节"></a>基于redis分布式锁的具体方案及细节</h3>
             </div>
             <hr>
 
@@ -429,7 +382,7 @@
                     <span class="reprint-tip">Reprint please specify: </span>
                     <a href="https://github.com/ruanjl" class="b-link-green">江0</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/01/21/xian-liu-fang-an-dui-bi/" class="b-link-green">限流方案对比</a>
+                    <a href="/2019/01/22/jiu-jing-ying-gai-zen-me-shi-xian-fen-bu-shi-suo/" class="b-link-green">究竟应该怎么实现分布式锁？</a>
                 </p>
             </div>
         </div>
@@ -451,7 +404,7 @@
         repo: 'ruanjl.github.io',
         owner: 'ruanjl',
         admin: ["ruanjl"],
-        id: '2019-01-21T18-57-53',
+        id: '2019-01-22T21-54-06',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -475,23 +428,80 @@
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">Previous</div>
             <div class="card">
-                <a href="/2019/01/22/jiu-jing-ying-gai-zen-me-shi-xian-fen-bu-shi-suo/">
+                <a href="/2019/01/23/cha-kuai-gai-man-b-shu-gai-kuai-cha-man-lsm-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="究竟应该怎么实现分布式锁？">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="查快改慢B+树,改快查慢LSM树">
                         
-                        <span class="card-title">究竟应该怎么实现分布式锁？</span>
+                        <span class="card-title">查快改慢B+树,改快查慢LSM树</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary">
-背景前几天突然接到任务说要实现一个分布式锁，由于之前有自己实现过一些demo，对各种分布式锁也都有一定的了解，实现的时候会数量一些，但是毕竟是公司直接要拿来用的东西，反复斟酌后才把初期的方案定了下来。
-常用的分布式锁简介基于redis的分</div>
+前言书本数据结构与算法里面就提到过B树在索引上的应用,而实际应用中一直有人又对这个数据结构持续做了多优化。
+索引文件数据库的索引其实指的是索引文件，而B+树是我们索引文件存储存方式。用于给存储引擎(这里指innodb)查找指定的数据，这里</div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-22
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-23
                         </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/mysql/" class="post-category" target="_blank">
+                                    mysql
+                                </a>
+                            
+                            <a href="/categories/mysql/数据结构/" class="post-category" target="_blank">
+                                    数据结构
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/数据结构/" target="_blank">
+                        <span class="chip bg-color">数据结构</span>
+                    </a>
+                    
+                    <a href="/tags/mysql/" target="_blank">
+                        <span class="chip bg-color">mysql</span>
+                    </a>
+                    
+                    <a href="/tags/索引/" target="_blank">
+                        <span class="chip bg-color">索引</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">Next</div>
+            <div class="card">
+                <a href="/2019/01/21/xian-liu-fang-an-dui-bi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="限流方案对比">
+                        
+                        <span class="card-title">限流方案对比</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">广为流传的接口限流方案漏斗桶如果将请求比作是水，水来了都先放进桶里，并以限定的速度出水，桶满会溢出，体现为拒绝服务。漏斗有一个进水口和一个出水口，出水口以一定速率出水，并且有一个最大出水速率。在漏斗中没有水的时候，
+
+如果进水速率小于等于最</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-21
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -509,59 +519,6 @@
                     
                     <a href="/tags/分布式/" target="_blank">
                         <span class="chip bg-color">分布式</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">Next</div>
-            <div class="card">
-                <a href="/2019/01/17/source/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="springMVC 源码自探">
-                        
-                        <span class="card-title">springMVC 源码自探</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary">springMVC 源码自探
-弄清楚springMVC对我们写rest接口有莫大的好处说明：其实和springMVC绑定在一起的内容还有这些：
-
-http的知识
-消息转化
-拦截器的实现原理
-其他，如消息监控的植入actuator,zipki</div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-17
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/springMVC/" class="post-category" target="_blank">
-                                    springMVC
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/源码/" target="_blank">
-                        <span class="chip bg-color">源码</span>
-                    </a>
-                    
-                    <a href="/tags/springMVC/" target="_blank">
-                        <span class="chip bg-color">springMVC</span>
                     </a>
                     
                 </div>

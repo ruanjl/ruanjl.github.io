@@ -4,6 +4,162 @@
   
     
     <entry>
+      <title>设计模式.四</title>
+      <link href="/2019/12/19/she-ji-mo-shi-si/"/>
+      <url>/2019/12/19/she-ji-mo-shi-si/</url>
+      
+        <content type="html"><![CDATA[<h3 id="13-状态模式state"><a href="#13-状态模式state" class="headerlink" title="13.状态模式state"></a>13.状态模式state</h3><ul><li>概念：</li><li>应用：</li><li>注意点：<br>实操:<pre class=" language-java"><code class="language-java">  <span class="token comment" spellcheck="true">// todo</span></code></pre><h3 id="14-策略模式"><a href="#14-策略模式" class="headerlink" title="14.策略模式"></a>14.策略模式</h3></li><li>概念：</li><li>应用：</li><li>注意点：<br>实操:<pre class=" language-java"><code class="language-java">  <span class="token comment" spellcheck="true">// todo</span></code></pre><h3 id="15-代理模式"><a href="#15-代理模式" class="headerlink" title="15.代理模式"></a>15.代理模式</h3></li><li>概念：</li><li>应用：</li><li>注意点：<br>实操:<pre class=" language-java"><code class="language-java">  <span class="token comment" spellcheck="true">// todo</span></code></pre><h3 id="16-代理模式"><a href="#16-代理模式" class="headerlink" title="16.代理模式"></a>16.代理模式</h3></li><li>概念：</li><li>应用：</li><li>注意点：<br>实操:<pre class=" language-java"><code class="language-java">  <span class="token comment" spellcheck="true">// todo</span></code></pre></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 设计模式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 设计模式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>设计模式.三</title>
+      <link href="/2019/12/18/she-ji-mo-shi-san/"/>
+      <url>/2019/12/18/she-ji-mo-shi-san/</url>
+      
+        <content type="html"><![CDATA[<h3 id="9-观察者模式"><a href="#9-观察者模式" class="headerlink" title="9.观察者模式"></a>9.观察者模式</h3><ul><li>概念：</li><li>应用：</li><li>注意点：<br>实操:<pre class=" language-java"><code class="language-java">  <span class="token comment" spellcheck="true">// todo</span></code></pre><h3 id="10-原型模式Prototype"><a href="#10-原型模式Prototype" class="headerlink" title="10.原型模式Prototype"></a>10.原型模式Prototype</h3></li><li>概念：</li><li>应用：</li><li>注意点：<br>实操:<pre class=" language-java"><code class="language-java">  <span class="token comment" spellcheck="true">// todo</span></code></pre><h3 id="11-外观模式"><a href="#11-外观模式" class="headerlink" title="11.外观模式"></a>11.外观模式</h3></li><li>概念：</li><li>应用：</li><li>注意点：<br>实操:<pre class=" language-java"><code class="language-java">  <span class="token comment" spellcheck="true">// todo</span></code></pre><h3 id="12-迭代器模式"><a href="#12-迭代器模式" class="headerlink" title="12.迭代器模式"></a>12.迭代器模式</h3></li><li>概念：</li><li>应用：</li><li>注意点：<br>实操:<pre class=" language-java"><code class="language-java">  <span class="token comment" spellcheck="true">// todo</span></code></pre></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 设计模式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 设计模式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>设计模式.二</title>
+      <link href="/2019/12/17/she-ji-mo-shi-er/"/>
+      <url>/2019/12/17/she-ji-mo-shi-er/</url>
+      
+        <content type="html"><![CDATA[<p>接着一继续</p><h3 id="5-构建者模式Builder"><a href="#5-构建者模式Builder" class="headerlink" title="5.构建者模式Builder"></a>5.构建者模式Builder</h3><ul><li>概念：</li><li>应用：</li><li>注意点：<br>实操:<pre class=" language-java"><code class="language-java">  <span class="token comment" spellcheck="true">// todo</span></code></pre><h3 id="6-模板方法Template"><a href="#6-模板方法Template" class="headerlink" title="6.模板方法Template"></a>6.模板方法Template</h3></li><li>概念：</li><li>应用：</li><li>注意点：<br>实操:<pre class=" language-java"><code class="language-java">  <span class="token comment" spellcheck="true">// todo</span></code></pre><h3 id="7-责任链模式"><a href="#7-责任链模式" class="headerlink" title="7.责任链模式"></a>7.责任链模式</h3></li><li>概念：</li><li>应用：</li><li>注意点：<br>实操:<pre class=" language-java"><code class="language-java">  <span class="token comment" spellcheck="true">// todo</span></code></pre><h3 id="8-代理模式"><a href="#8-代理模式" class="headerlink" title="8.代理模式"></a>8.代理模式</h3></li><li>概念：</li><li>应用：</li><li>注意点：<br>实操:<pre class=" language-java"><code class="language-java">  <span class="token comment" spellcheck="true">// todo</span></code></pre></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 设计模式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 设计模式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>设计模式.一</title>
+      <link href="/2019/12/16/she-ji-mo-shi-yi/"/>
+      <url>/2019/12/16/she-ji-mo-shi-yi/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>设计模式，对于一直写业务代码的人来说可能几乎涉及不到，其实也是，因为他是<strong>设计</strong>模式，肯定是用来设计的啊，写业务代码设计个啥，那肯定都是设计框架这样的才用到的嘛。<br>设计模式其本身也是前人大牛总结的宝贵经验，要想写出厉害的代码肯定得站在巨人肩上了，我就我个人碰到的一些设计模式的典型例子来做一个总结，以便以后自己温习。</p><h3 id="1-单例模式"><a href="#1-单例模式" class="headerlink" title="1.单例模式"></a>1.单例模式</h3><p>就我自己而言我一直觉得这是一个大家都知道的设计模式，但是要将这个设计模式弄明白其实还是的花点时间，而且还得有点功底才可以的。</p><ul><li>概念：</li><li>应用：</li><li>注意点：<br>实操:<pre class=" language-java"><code class="language-java">  <span class="token comment" spellcheck="true">// todo</span></code></pre><h3 id="2-工厂模式"><a href="#2-工厂模式" class="headerlink" title="2.工厂模式"></a>2.工厂模式</h3></li><li>概念：</li><li>应用：</li><li>注意点：<br>实操:<pre class=" language-java"><code class="language-java">  <span class="token comment" spellcheck="true">// todo</span></code></pre><h3 id="3-配置器模式"><a href="#3-配置器模式" class="headerlink" title="3.配置器模式"></a>3.配置器模式</h3></li><li>概念：</li><li>应用：</li><li>注意点：<br>实操:<pre class=" language-java"><code class="language-java">  <span class="token comment" spellcheck="true">// todo</span></code></pre><h3 id="4-构建者模式Builder"><a href="#4-构建者模式Builder" class="headerlink" title="4.构建者模式Builder"></a>4.构建者模式Builder</h3></li><li>概念：</li><li>应用：</li><li>注意点：<br>实操:<pre class=" language-java"><code class="language-java">  <span class="token comment" spellcheck="true">// todo</span></code></pre></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 设计模式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 设计模式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>查快改慢B+树,改快查慢LSM树</title>
+      <link href="/2019/01/23/cha-kuai-gai-man-b-shu-gai-kuai-cha-man-lsm-shu/"/>
+      <url>/2019/01/23/cha-kuai-gai-man-b-shu-gai-kuai-cha-man-lsm-shu/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://bing.ioliu.cn/photo/EyeFireworks_EN-AU4834024020" alt=""></p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>书本<a href=""><strong>数据结构与算法</strong></a>里面就提到过B树在索引上的应用,而实际应用中一直有人又对这个数据结构持续做了多优化。</p><h3 id="索引文件"><a href="#索引文件" class="headerlink" title="索引文件"></a>索引文件</h3><p>数据库的索引其实指的是索引文件，而B+树是我们索引文件存储存方式。用于给存储引擎(这里指innodb)查找指定的数据，<br>这里有必要温习一下数据库查根据where条件查找数据的过程，这里主要发生在storage engine层：：</p><ol><li>index Key<ul><li>首先将index key条件满足的索引记录区间确定，再索引上使用index filter进行过滤</li></ul></li><li>index Filter<ul><li>将满足的index filter条件的索引记录才去回表取出整行记录返回server层</li><li>不满足index filter条件的索引记录丢弃，不回表、也不会返回server层 </li></ul></li><li>Table Filter<ul><li>非索引层面的数据过滤，已经拿到数据，舍弃不要的</li></ul></li></ol><h3 id="B-树的特点"><a href="#B-树的特点" class="headerlink" title="B+树的特点"></a>B+树的特点</h3><p>优势：</p><ul><li>支持范围查找，所以需要有序 </li><li>多叉树结构，降低了索引结构的深度，避免传统二叉树结构中绝大部分的随机访问操作，从而有效减少了磁盘磁头的寻道次数，降低了外存访问延迟对性能的影响本身的时间效率比较高，减少io次数</li><li>B+树上层页面中的记录，存储的是下层页面中的最小值(Low Key)；</li><li>B+树的所有数据，均存储在B+树的叶节点<br>缺点：</li><li>mysql的B+树会在大量的随机<strong>io</strong>的时候性能下降，特别是随机插入，有可能导致多次页分裂，影响效率</li><li>每次的页分裂会导致页面的空间利用率下降到50% </li></ul><h3 id="B-树的特点-1"><a href="#B-树的特点-1" class="headerlink" title="B+树的特点"></a>B+树的特点</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> mysql </category>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+            <tag> mysql </tag>
+            
+            <tag> 索引 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>究竟应该怎么实现分布式锁？</title>
+      <link href="/2019/01/22/jiu-jing-ying-gai-zen-me-shi-xian-fen-bu-shi-suo/"/>
+      <url>/2019/01/22/jiu-jing-ying-gai-zen-me-shi-xian-fen-bu-shi-suo/</url>
+      
+        <content type="html"><![CDATA[<p><img src="http://ww1.sinaimg.cn/large/006Cwrd9gy1fzfs9sj3xkj31hc0u07de.jpg" alt=""></p><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>前几天突然接到任务说要实现一个分布式锁，由于之前有自己实现过一些demo，对各种分布式锁也都有一定的了解，<br>实现的时候会数量一些，但是毕竟是公司直接要拿来用的东西，反复斟酌后才把初期的方案定了下来。</p><h3 id="常用的分布式锁简介"><a href="#常用的分布式锁简介" class="headerlink" title="常用的分布式锁简介"></a>常用的分布式锁简介</h3><p>基于redis的分布式锁</p><ul><li>使用setNX的方式</li><li>直接使用redis官方的redission已经实现好的redLock</li></ul><p>基于zookeeper的分布式锁</p><ul><li>利用zookeeper的顺序临时节点，自旋比较自己的节点是否是节点里的最小值，来获得锁。</li></ul><p>基于etcd的分布式锁</p><ul><li>原理与zookeeper类似</li></ul><h3 id="基于redis分布式锁的具体方案及细节"><a href="#基于redis分布式锁的具体方案及细节" class="headerlink" title="基于redis分布式锁的具体方案及细节"></a>基于redis分布式锁的具体方案及细节</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> 分布式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 分布式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>限流方案对比</title>
       <link href="/2019/01/21/xian-liu-fang-an-dui-bi/"/>
       <url>/2019/01/21/xian-liu-fang-an-dui-bi/</url>
