@@ -1,29 +1,26 @@
 <!DOCTYPE HTML>
-<html lang="zh-Hans">
+<html lang="zh-CN">
 <head>
     
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="设计模式.四, 江0">
-    <meta name="description" content="13.状态模式state
+    <meta name="keywords" content="设计模式.二, 江0">
+    <meta name="description" content="接着一继续
+5.构建者模式Builder
 概念：
 应用：
 注意点：实操:  // todo
 
-14.策略模式
+6.模板方法Template
 概念：
 应用：
 注意点：实操:  // todo
 
-15.代理模式
+7.责任链模式
 概念：
 应用：
-注意点：实操:  // todo
-
-16.代理模式
-概念：
-应">
+注意点：实操:  // todo">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -31,7 +28,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>设计模式.四 | 江0</title>
+    <title>设计模式.二 | 江0</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -71,7 +68,7 @@
             
             <i class="fa fa-home"></i>
             
-            <span>Index</span>
+            <span>首页</span>
         </a>
     </li>
     
@@ -80,7 +77,7 @@
             
             <i class="fa fa-tags"></i>
             
-            <span>Tags</span>
+            <span>标签</span>
         </a>
     </li>
     
@@ -89,7 +86,7 @@
             
             <i class="fa fa-bookmark"></i>
             
-            <span>Categories</span>
+            <span>分类</span>
         </a>
     </li>
     
@@ -98,7 +95,7 @@
             
             <i class="fa fa-archive"></i>
             
-            <span>Archives</span>
+            <span>归档</span>
         </a>
     </li>
     
@@ -107,7 +104,7 @@
             
             <i class="fa fa-user-circle-o"></i>
             
-            <span>About</span>
+            <span>关于</span>
         </a>
     </li>
     
@@ -116,7 +113,7 @@
             
             <i class="fa fa-address-book"></i>
             
-            <span>Friends</span>
+            <span>友情链接</span>
         </a>
     </li>
     
@@ -151,7 +148,7 @@
                 
                 <i class="fa fa-fw fa-home"></i>
                 
-                Index
+                首页
             </a>
         </li>
         
@@ -160,7 +157,7 @@
                 
                 <i class="fa fa-fw fa-tags"></i>
                 
-                Tags
+                标签
             </a>
         </li>
         
@@ -169,7 +166,7 @@
                 
                 <i class="fa fa-fw fa-bookmark"></i>
                 
-                Categories
+                分类
             </a>
         </li>
         
@@ -178,7 +175,7 @@
                 
                 <i class="fa fa-fw fa-archive"></i>
                 
-                Archives
+                归档
             </a>
         </li>
         
@@ -187,7 +184,7 @@
                 
                 <i class="fa fa-fw fa-user-circle-o"></i>
                 
-                About
+                关于
             </a>
         </li>
         
@@ -196,7 +193,7 @@
                 
                 <i class="fa fa-fw fa-address-book"></i>
                 
-                Friends
+                友情链接
             </a>
         </li>
         
@@ -303,13 +300,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        设计模式.四
+                        设计模式.二
                     </div>
                 </div>
             </div>
@@ -319,10 +316,101 @@
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1,
+    #articleContent h2,
+    #articleContent h3,
+    #articleContent h4,
+    #articleContent h5,
+    #articleContent h6 {
+        padding-top: 76px;
+        margin-top: -76px;
+    }
+
+    #articleContent h1 {
+        line-height: 3.5rem;
+    }
+
+    #articleContent h2 {
+        line-height: 3.2rem;
+    }
+
+    #articleContent h3 {
+        line-height: 2.8rem;
+    }
+
+    #articleContent h4 {
+        line-height: 2.5rem;
+    }
+
+    #articleContent h5 {
+        line-height: 2.2rem;
+    }
+
+    #articleContent h6 {
+        line-height: 1.9rem;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+</style>
+<div class="row">
+    <div class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -349,34 +437,35 @@
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2019-12-19
+                    <i class="fa fa-clock-o fa-fw"></i>2018-12-17
                 </span>
 				
 				
                     <span id="busuanzi_container_page_pv" class="post-read">
-                    <i class="fa fa-eye fa-fw"></i>Read <span id="busuanzi_value_page_pv"></span>
+                    <i class="fa fa-eye fa-fw"></i>阅读 <span id="busuanzi_value_page_pv"></span>
 				
             </span></div>
         </div>
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="13-状态模式state"><a href="#13-状态模式state" class="headerlink" title="13.状态模式state"></a>13.状态模式state</h3><ul>
+                <p>接着一继续</p>
+<h3 id="5-构建者模式Builder"><a href="#5-构建者模式Builder" class="headerlink" title="5.构建者模式Builder"></a>5.构建者模式Builder</h3><ul>
 <li>概念：</li>
 <li>应用：</li>
 <li>注意点：<br>实操:<pre class=" language-java"><code class="language-java">  <span class="token comment" spellcheck="true">// todo</span>
 </code></pre>
-<h3 id="14-策略模式"><a href="#14-策略模式" class="headerlink" title="14.策略模式"></a>14.策略模式</h3></li>
+<h3 id="6-模板方法Template"><a href="#6-模板方法Template" class="headerlink" title="6.模板方法Template"></a>6.模板方法Template</h3></li>
 <li>概念：</li>
 <li>应用：</li>
 <li>注意点：<br>实操:<pre class=" language-java"><code class="language-java">  <span class="token comment" spellcheck="true">// todo</span>
 </code></pre>
-<h3 id="15-代理模式"><a href="#15-代理模式" class="headerlink" title="15.代理模式"></a>15.代理模式</h3></li>
+<h3 id="7-责任链模式"><a href="#7-责任链模式" class="headerlink" title="7.责任链模式"></a>7.责任链模式</h3></li>
 <li>概念：</li>
 <li>应用：</li>
 <li>注意点：<br>实操:<pre class=" language-java"><code class="language-java">  <span class="token comment" spellcheck="true">// todo</span>
 </code></pre>
-<h3 id="16-代理模式"><a href="#16-代理模式" class="headerlink" title="16.代理模式"></a>16.代理模式</h3></li>
+<h3 id="8-代理模式"><a href="#8-代理模式" class="headerlink" title="8.代理模式"></a>8.代理模式</h3></li>
 <li>概念：</li>
 <li>应用：</li>
 <li>注意点：<br>实操:<pre class=" language-java"><code class="language-java">  <span class="token comment" spellcheck="true">// todo</span>
@@ -401,10 +490,10 @@
 
             <div class="reprint">
                 <p>
-                    <span class="reprint-tip">Reprint please specify: </span>
+                    <span class="reprint-tip">转载请注明: </span>
                     <a href="https://github.com/ruanjl" class="b-link-green">江0</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/12/19/she-ji-mo-shi-si/" class="b-link-green">设计模式.四</a>
+                    <a href="/2018/12/17/she-ji-mo-shi-er/" class="b-link-green">设计模式.二</a>
                 </p>
             </div>
         </div>
@@ -426,7 +515,7 @@
         repo: 'ruanjl.github.io',
         owner: 'ruanjl',
         admin: ["ruanjl"],
-        id: '2019-12-19T10-28-25',
+        id: '2018-12-17T10-26-24',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -448,70 +537,9 @@
     <div class="row article-row">
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">Current</div>
+            <div class="article-badge left-badge text-color">上一篇</div>
             <div class="card">
-                <a href="/2019/12/19/she-ji-mo-shi-si/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="设计模式.四">
-                        
-                        <span class="card-title">设计模式.四</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary">13.状态模式state
-概念：
-应用：
-注意点：实操:  // todo
-
-14.策略模式
-概念：
-应用：
-注意点：实操:  // todo
-
-15.代理模式
-概念：
-应用：
-注意点：实操:  // todo
-
-16.代理模式
-概念：
-应</div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-19
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/设计模式/" class="post-category" target="_blank">
-                                    设计模式
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/设计模式/" target="_blank">
-                        <span class="chip bg-color">设计模式</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">Next</div>
-            <div class="card">
-                <a href="/2019/12/18/she-ji-mo-shi-san/">
+                <a href="/2018/12/18/she-ji-mo-shi-san/">
                     <div class="card-image">
                         
                         
@@ -539,8 +567,51 @@
 12.迭代器模式
 </div>
                     <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-18
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/设计模式/" class="post-category" target="_blank">
+                                    设计模式
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/设计模式/" target="_blank">
+                        <span class="chip bg-color">设计模式</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">下一篇</div>
+            <div class="card">
+                <a href="/2018/12/16/she-ji-mo-shi-yi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="设计模式.一">
+                        
+                        <span class="card-title">设计模式.一</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">前言设计模式，对于一直写业务代码的人来说可能几乎涉及不到，其实也是，因为他是设计模式，肯定是用来设计的啊，写业务代码设计个啥，那肯定都是设计框架这样的才用到的嘛。设计模式其本身也是前人大牛总结的宝贵经验，要想写出厉害的代码肯定得站在巨人肩上</div>
+                    <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-18
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-16
                             </span>
                         <span class="publish-author">
                             
@@ -598,9 +669,9 @@
 
         var url = document.location.href;
         newdiv.innerHTML += '<br />'
-            + 'From: 江0<br />'
-            + 'Author: 江0<br />'
-            + 'Link: <a href="' + url + '">' + url + '</a><br />'
+            + '来源: 江0<br />'
+            + '作者: 江0<br />'
+            + '链接: <a href="' + url + '">' + url + '</a><br />'
             + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
 
         selection.selectAllChildren(newdiv);
@@ -608,6 +679,53 @@
     });
 </script>
 
+    </div>
+    <div class="col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title">目录</div>
+            <div id="toc-content">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+</script>
     
 
 </main>
@@ -655,8 +773,8 @@
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
-            <span class="title">Search</span>
-            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword" class="search-input" autofocus>
+            <span class="title">搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input" autofocus>
         </div>
         <div id="searchResult"></div>
     </div>
@@ -684,8 +802,6 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-
-    <script src="/libs/others/clicklove.js"></script>
 
 
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>

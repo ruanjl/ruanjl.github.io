@@ -1,18 +1,12 @@
 <!DOCTYPE HTML>
-<html lang="zh-Hans">
+<html lang="zh-CN">
 <head>
     
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="springMVC 源码自探, 江0">
-    <meta name="description" content="springMVC 源码自探
-弄清楚springMVC对我们写rest接口有莫大的好处说明：其实和springMVC绑定在一起的内容还有这些：
-
-http的知识
-消息转化
-拦截器的实现原理
-其他，如消息监控的植入actuator,zipki">
+    <meta name="keywords" content="分类: 数据结构, 江0">
+    <meta name="description" content="分类: 数据结构 | 江0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +14,7 @@ http的知识
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>springMVC 源码自探 | 江0</title>
+    <title>分类: 数据结构 | 江0</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -60,7 +54,7 @@ http的知识
             
             <i class="fa fa-home"></i>
             
-            <span>Index</span>
+            <span>首页</span>
         </a>
     </li>
     
@@ -69,7 +63,7 @@ http的知识
             
             <i class="fa fa-tags"></i>
             
-            <span>Tags</span>
+            <span>标签</span>
         </a>
     </li>
     
@@ -78,7 +72,7 @@ http的知识
             
             <i class="fa fa-bookmark"></i>
             
-            <span>Categories</span>
+            <span>分类</span>
         </a>
     </li>
     
@@ -87,7 +81,7 @@ http的知识
             
             <i class="fa fa-archive"></i>
             
-            <span>Archives</span>
+            <span>归档</span>
         </a>
     </li>
     
@@ -96,7 +90,7 @@ http的知识
             
             <i class="fa fa-user-circle-o"></i>
             
-            <span>About</span>
+            <span>关于</span>
         </a>
     </li>
     
@@ -105,7 +99,7 @@ http的知识
             
             <i class="fa fa-address-book"></i>
             
-            <span>Friends</span>
+            <span>友情链接</span>
         </a>
     </li>
     
@@ -140,7 +134,7 @@ http的知识
                 
                 <i class="fa fa-fw fa-home"></i>
                 
-                Index
+                首页
             </a>
         </li>
         
@@ -149,7 +143,7 @@ http的知识
                 
                 <i class="fa fa-fw fa-tags"></i>
                 
-                Tags
+                标签
             </a>
         </li>
         
@@ -158,7 +152,7 @@ http的知识
                 
                 <i class="fa fa-fw fa-bookmark"></i>
                 
-                Categories
+                分类
             </a>
         </li>
         
@@ -167,7 +161,7 @@ http的知识
                 
                 <i class="fa fa-fw fa-archive"></i>
                 
-                Archives
+                归档
             </a>
         </li>
         
@@ -176,7 +170,7 @@ http的知识
                 
                 <i class="fa fa-fw fa-user-circle-o"></i>
                 
-                About
+                关于
             </a>
         </li>
         
@@ -185,7 +179,7 @@ http的知识
                 
                 <i class="fa fa-fw fa-address-book"></i>
                 
-                Friends
+                友情链接
             </a>
         </li>
         
@@ -275,290 +269,156 @@ http的知识
     </nav>
 </header>
 
-
-<script src="/libs/cryptojs/crypto-js.min.js"></script>
-<script>
-    (function() {
-        let pwd = '';
-        if (pwd && pwd.length > 0) {
-            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
-                alert('密码错误，将返回主页！');
-                location.href = '/';
-            }
-        }
-    })();
-</script>
-
-
-
-
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover  about-cover" style="background-image: url('/medias/cover.jpg')">
     <div class="container">
         <div class="row">
-            <div class="col s12 m12 l12">
+            <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
                 <div class="brand">
-                    <div class="description center-align post-title">
-                        springMVC 源码自探
+                    <div class="title center-align">
+                    
+                        RJL
+                    
+                    </div>
+
+                    <div class="description center-align">
+                    
+                        I would rather make a mistake than to miss it.
+                    
                     </div>
                 </div>
             </div>
         </div>
+        
     </div>
 </div>
 
+<script>
+// Dynamically switch banner pictures every day.
+$('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
+</script>
 
-
-<main class="container content">
+<main class="content">
 
     
-    <!-- 文章内容详情 -->
-<div id="artDetail">
+
+<div id="category-cloud" class="container chip-container">
     <div class="card">
-        <div class="card-content article-info">
-            
-            <div class="article-tag">
+        <div class="card-content">
+            <div class="tag-title center-align">文章分类</div>
+            <div class="tag-chips">
                 
-                <a href="/tags/源码/" target="_blank">
-                    <span class="chip bg-color">源码</span>
+                
+                
+                <a href="/categories/springMVC/" title="springMVC: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " style="background-color: #F9EBEA;">springMVC
+                        <span class="tag-length">1</span>
+                    </span>
                 </a>
                 
-                <a href="/tags/springMVC/" target="_blank">
-                    <span class="chip bg-color">springMVC</span>
+                
+                <a href="/categories/数据结构/" title="数据结构: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active " style="background-color: #F5EEF8;">数据结构
+                        <span class="tag-length">1</span>
+                    </span>
                 </a>
                 
-            </div>
-            
-            <div class="post-info">
                 
-                <span class="post-cate">
-                <!--<span class="post-cate" style="margin-right: 0px">-->
-                    <i class="fa fa-bookmark fa-fw icon-category"></i>
-                    
-                    <a href="/categories/springMVC/" class="post-category" target="_blank">
-                        springMVC
-                    </a>
-                    
-                </span>
+                <a href="/categories/设计模式/" title="设计模式: 4">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " style="background-color: #D5F5E3;">设计模式
+                        <span class="tag-length">4</span>
+                    </span>
+                </a>
                 
-
-                <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2019-01-17
-                </span>
-				
-				
-                    <span id="busuanzi_container_page_pv" class="post-read">
-                    <i class="fa fa-eye fa-fw"></i>Read <span id="busuanzi_value_page_pv"></span>
-				
-            </span></div>
-        </div>
-        <hr>
-        <div class="card-content article-card-content">
-            <div id="articleContent">
-                <h2 id="springMVC-源码自探"><a href="#springMVC-源码自探" class="headerlink" title="springMVC 源码自探"></a>springMVC 源码自探</h2><p><img src="http://ww1.sinaimg.cn/large/006Cwrd9gy1fxskn2tpksj31hc0u0guq.jpg" alt="I love it when a plan comes together."></p>
-<h3 id="弄清楚springMVC对我们写rest接口有莫大的好处"><a href="#弄清楚springMVC对我们写rest接口有莫大的好处" class="headerlink" title="弄清楚springMVC对我们写rest接口有莫大的好处"></a>弄清楚springMVC对我们写rest接口有莫大的好处</h3><p><strong>说明：其实和springMVC绑定在一起的内容还有这些：</strong></p>
-<ol>
-<li>http的知识</li>
-<li>消息转化</li>
-<li>拦截器的实现原理</li>
-<li>其他，如消息监控的植入actuator,zipkin等。</li>
-</ol>
-
-            </div>
-            <hr>
-
-            
-
-            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
-
-<div id="article-share">
-    
-    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
-    
-</div>
-
-<script src="/libs/share/js/social-share.min.js"></script>
-
-            <div class="reprint">
-                <p>
-                    <span class="reprint-tip">Reprint please specify: </span>
-                    <a href="https://github.com/ruanjl" class="b-link-green">江0</a>
-                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/01/17/source/" class="b-link-green">springMVC 源码自探</a>
-                </p>
+                
+                <a href="/categories/分布式/" title="分布式: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " style="background-color: #E8F8F5;">分布式
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/mysql/" title="mysql: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " style="background-color: #FEF9E7;">mysql
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/算法/" title="算法: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " style="background-color: #F8F9F9;">算法
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/mysql/数据结构/" title="数据结构: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active " style="background-color: #82E0AA;">数据结构
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
             </div>
         </div>
     </div>
-
-    
-        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
-<link rel="stylesheet" href="/css/my-gitalk.css">
-
-<div class="card gitalk-card" data-aos="fade-up">
-    <div id="gitalk-container" class="card-content"></div>
 </div>
 
-<script src="/libs/gitalk/gitalk.min.js"></script>
-<script>
-    let gitalk = new Gitalk({
-        clientID: '1333e0adc15b0b08e871',
-        clientSecret: '1ff294afe0ae8d1f2100248d107b99ec975c8013',
-        repo: 'ruanjl.github.io',
-        owner: 'ruanjl',
-        admin: ["ruanjl"],
-        id: '2019-01-17T15-28-30',
-        distractionFreeMode: false  // Facebook-like distraction free mode
-    });
-
-    gitalk.render('gitalk-container');
-</script>
     
 
-    
-
-    
-
-    
-
-    
-
-    
-
-<article id="prenext-posts" class="prev-next articles">
-    <div class="row article-row">
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">Previous</div>
-            <div class="card">
-                <a href="/2019/01/21/xian-liu-fang-an-dui-bi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="限流方案对比">
-                        
-                        <span class="card-title">限流方案对比</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary">广为流传的接口限流方案漏斗桶如果将请求比作是水，水来了都先放进桶里，并以限定的速度出水，桶满会溢出，体现为拒绝服务。漏斗有一个进水口和一个出水口，出水口以一定速率出水，并且有一个最大出水速率。在漏斗中没有水的时候，
-
-如果进水速率小于等于最</div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-21
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/分布式/" class="post-category" target="_blank">
-                                    分布式
-                                </a>
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/01/26/hong-hei-shu-rbtree-zai-jdk-zhong-de-shi-xian/">
+                        <div class="card-image tag-image">
                             
                             
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/分布式/" target="_blank">
-                        <span class="chip bg-color">分布式</span>
+                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="红黑树在jdk中的实现">
+                            
+                            <span class="card-title">红黑树在jdk中的实现</span>
+                        </div>
                     </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">Next</div>
-            <div class="card">
-                <a href="/2018/11/25/quicksort/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="QuickSort Application in java">
-                        
-                        <span class="card-title">QuickSort Application in java</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary">
-前言：对各种基本排序有了解的人都会知道，各种单一的排序都有他自己合适的使用场景，快速排序是综合表现最好的。而实际应用中的排序可要考虑的实在是太多了，看jdk的排序是怎么做的.
-java中的Arrays.Sort()方法是我们常用的排序方法</div>
-                    <div class="publish-info">
+                    <div class="card-content article-content">
+                        <div class="summary">前言jdk里主要有TreeMap和HashMap里有用到红黑树的数据结构，我觉得TreeMap的实现看起来友好一点，但是长时间不看也容易忘记</div>
+                        <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-11-25
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-26
                             </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/算法/" class="post-category" target="_blank">
-                                    算法
+                            <span class="publish-author">
+                                
+                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/数据结构/" class="post-category" target="_blank">
+                                    数据结构
                                 </a>
-                            
-                            
-                        </span>
+                                
+                                
+                            </span>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
+
                     
-                    <a href="/tags/Algorithm/" target="_blank">
-                        <span class="chip bg-color">Algorithm</span>
-                    </a>
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/数据结构/" target="_blank">
+                            <span class="chip bg-color">数据结构</span>
+                        </a>
+                        
+                    </div>
                     
                 </div>
-                
             </div>
+            
         </div>
-        
-    </div>
-</article>
-</div>
-
-
-<script>
-    $('#articleContent').on('copy', function (e) {
-        // IE8 or earlier browser is 'undefined'
-        if (typeof window.getSelection === 'undefined') return;
-
-        var selection = window.getSelection();
-        // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('120')) {
-            return;
-        }
-
-        // create a div outside of the visible area and fill it with the selected text.
-        var bodyElement = document.getElementsByTagName('body')[0];
-        var newdiv = document.createElement('div');
-        newdiv.style.position = 'absolute';
-        newdiv.style.left = '-99999px';
-        bodyElement.appendChild(newdiv);
-        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
-
-        // we need a <pre> tag workaround.
-        // otherwise the text inside "pre" loses all the line breaks!
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
-            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
-        }
-
-        var url = document.location.href;
-        newdiv.innerHTML += '<br />'
-            + 'From: 江0<br />'
-            + 'Author: 江0<br />'
-            + 'Link: <a href="' + url + '">' + url + '</a><br />'
-            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
-
-        selection.selectAllChildren(newdiv);
-        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
-    });
-</script>
-
-    
-
+    </article>
 </main>
 
 
@@ -604,8 +464,8 @@ java中的Arrays.Sort()方法是我们常用的排序方法</div>
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
-            <span class="title">Search</span>
-            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword" class="search-input" autofocus>
+            <span class="title">搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input" autofocus>
         </div>
         <div id="searchResult"></div>
     </div>
@@ -633,8 +493,6 @@ java中的Arrays.Sort()方法是我们常用的排序方法</div>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-
-    <script src="/libs/others/clicklove.js"></script>
 
 
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>

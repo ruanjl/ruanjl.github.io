@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/ruanjl/"/>
-  <updated>2019-01-23T14:39:56.311Z</updated>
+  <updated>2019-01-30T04:59:34.132Z</updated>
   <id>https://github.com/ruanjl/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>设计模式.四</title>
-    <link href="https://github.com/ruanjl/2019/12/19/she-ji-mo-shi-si/"/>
-    <id>https://github.com/ruanjl/2019/12/19/she-ji-mo-shi-si/</id>
-    <published>2019-12-19T02:28:25.000Z</published>
-    <updated>2019-01-23T14:39:56.311Z</updated>
+    <title>位运算的那些骚操作</title>
+    <link href="https://github.com/ruanjl/2019/01/28/wei-yun-suan-de-na-xie-sao-cao-zuo/"/>
+    <id>https://github.com/ruanjl/2019/01/28/wei-yun-suan-de-na-xie-sao-cao-zuo/</id>
+    <published>2019-01-28T04:58:21.000Z</published>
+    <updated>2019-01-30T04:59:34.132Z</updated>
     
     <summary type="html">
     
@@ -29,25 +29,27 @@
       
         
         
-          &lt;h3 id=&quot;13-状态模式state&quot;&gt;&lt;a href=&quot;#13-状态模式state&quot; class=&quot;headerlink&quot;
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
     </summary>
     
-      <category term="设计模式" scheme="https://github.com/ruanjl/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="算法" scheme="https://github.com/ruanjl/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="设计模式" scheme="https://github.com/ruanjl/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="算法" scheme="https://github.com/ruanjl/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="leetcode" scheme="https://github.com/ruanjl/tags/leetcode/"/>
     
   </entry>
   
   <entry>
-    <title>设计模式.三</title>
-    <link href="https://github.com/ruanjl/2019/12/18/she-ji-mo-shi-san/"/>
-    <id>https://github.com/ruanjl/2019/12/18/she-ji-mo-shi-san/</id>
-    <published>2019-12-18T02:28:20.000Z</published>
-    <updated>2019-01-23T14:39:56.310Z</updated>
+    <title>红黑树在jdk中的实现</title>
+    <link href="https://github.com/ruanjl/2019/01/26/hong-hei-shu-rbtree-zai-jdk-zhong-de-shi-xian/"/>
+    <id>https://github.com/ruanjl/2019/01/26/hong-hei-shu-rbtree-zai-jdk-zhong-de-shi-xian/</id>
+    <published>2019-01-26T02:51:33.000Z</published>
+    <updated>2019-01-26T14:21:27.741Z</updated>
     
     <summary type="html">
     
@@ -55,72 +57,16 @@
       
         
         
-          &lt;h3 id=&quot;9-观察者模式&quot;&gt;&lt;a href=&quot;#9-观察者模式&quot; class=&quot;headerlink&quot; title=&quot;9.观察者模式&quot;&gt;&lt;/a&gt;9.观察者模式&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;概念：&lt;/li&gt;
-&lt;li&gt;应用：&lt;/li&gt;
-&lt;li&gt;注意点：&lt;br&gt;实操:&lt;pre
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
     </summary>
     
-      <category term="设计模式" scheme="https://github.com/ruanjl/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="数据结构" scheme="https://github.com/ruanjl/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     
-      <category term="设计模式" scheme="https://github.com/ruanjl/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式.二</title>
-    <link href="https://github.com/ruanjl/2019/12/17/she-ji-mo-shi-er/"/>
-    <id>https://github.com/ruanjl/2019/12/17/she-ji-mo-shi-er/</id>
-    <published>2019-12-17T02:26:24.000Z</published>
-    <updated>2019-01-23T14:39:56.310Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;接着一继续&lt;/p&gt;
-&lt;h3 id=&quot;5-构建者模式Builder&quot;&gt;&lt;a href=&quot;#5-构建者模式Builder&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="设计模式" scheme="https://github.com/ruanjl/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    
-      <category term="设计模式" scheme="https://github.com/ruanjl/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式.一</title>
-    <link href="https://github.com/ruanjl/2019/12/16/she-ji-mo-shi-yi/"/>
-    <id>https://github.com/ruanjl/2019/12/16/she-ji-mo-shi-yi/</id>
-    <published>2019-12-16T02:06:39.000Z</published>
-    <updated>2019-01-23T14:39:56.309Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="设计模式" scheme="https://github.com/ruanjl/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    
-      <category term="设计模式" scheme="https://github.com/ruanjl/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="数据结构" scheme="https://github.com/ruanjl/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
@@ -129,7 +75,7 @@
     <link href="https://github.com/ruanjl/2019/01/23/cha-kuai-gai-man-b-shu-gai-kuai-cha-man-lsm-shu/"/>
     <id>https://github.com/ruanjl/2019/01/23/cha-kuai-gai-man-b-shu-gai-kuai-cha-man-lsm-shu/</id>
     <published>2019-01-23T03:47:24.000Z</published>
-    <updated>2019-01-23T14:39:56.307Z</updated>
+    <updated>2019-01-26T14:21:27.739Z</updated>
     
     <summary type="html">
     
@@ -137,8 +83,7 @@
       
         
         
-          &lt;p&gt;&lt;img src=&quot;https://bing.ioliu.cn/photo/EyeFireworks_EN-AU4834024020&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
@@ -158,11 +103,11 @@
   </entry>
   
   <entry>
-    <title>究竟应该怎么实现分布式锁？</title>
+    <title>分布式锁究竟应该怎么实现？</title>
     <link href="https://github.com/ruanjl/2019/01/22/jiu-jing-ying-gai-zen-me-shi-xian-fen-bu-shi-suo/"/>
     <id>https://github.com/ruanjl/2019/01/22/jiu-jing-ying-gai-zen-me-shi-xian-fen-bu-shi-suo/</id>
     <published>2019-01-22T13:54:06.000Z</published>
-    <updated>2019-01-23T14:39:56.308Z</updated>
+    <updated>2019-01-26T14:21:27.740Z</updated>
     
     <summary type="html">
     
@@ -170,8 +115,7 @@
       
         
         
-          &lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/006Cwrd9gy1fzfs9sj3xkj31hc0u07de.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot;
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
@@ -197,7 +141,7 @@
       
         
         
-          &lt;h2 id=&quot;广为流传的接口限流方案&quot;&gt;&lt;a href=&quot;#广为流传的接口限流方案&quot; class=&quot;headerlink&quot; title=&quot;广为流传的接口限流方案&quot;&gt;&lt;/a&gt;广为流传的接口限流方案&lt;/h2&gt;&lt;h3 id=&quot;漏斗桶&quot;&gt;&lt;a href=&quot;#漏斗桶&quot;
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
@@ -212,10 +156,10 @@
   
   <entry>
     <title>springMVC 源码自探</title>
-    <link href="https://github.com/ruanjl/2019/01/17/source/"/>
-    <id>https://github.com/ruanjl/2019/01/17/source/</id>
+    <link href="https://github.com/ruanjl/2019/01/17/springmvc-yuan-ma-zi-tan/"/>
+    <id>https://github.com/ruanjl/2019/01/17/springmvc-yuan-ma-zi-tan/</id>
     <published>2019-01-17T07:28:30.000Z</published>
-    <updated>2019-01-20T06:40:32.484Z</updated>
+    <updated>2019-01-26T14:21:27.730Z</updated>
     
     <summary type="html">
     
@@ -223,7 +167,7 @@
       
         
         
-          &lt;h2 id=&quot;springMVC-源码自探&quot;&gt;&lt;a href=&quot;#springMVC-源码自探&quot; class=&quot;headerlink&quot; title=&quot;springMVC 源码自探&quot;&gt;&lt;/a&gt;springMVC 源码自探&lt;/h2&gt;&lt;p&gt;&lt;img
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
@@ -239,11 +183,11 @@
   </entry>
   
   <entry>
-    <title>QuickSort Application in java</title>
-    <link href="https://github.com/ruanjl/2018/11/25/quicksort/"/>
-    <id>https://github.com/ruanjl/2018/11/25/quicksort/</id>
-    <published>2018-11-25T15:07:22.000Z</published>
-    <updated>2019-01-20T07:00:07.565Z</updated>
+    <title>设计模式.四</title>
+    <link href="https://github.com/ruanjl/2018/12/19/she-ji-mo-shi-si/"/>
+    <id>https://github.com/ruanjl/2018/12/19/she-ji-mo-shi-si/</id>
+    <published>2018-12-19T02:28:25.000Z</published>
+    <updated>2019-01-26T14:21:27.747Z</updated>
     
     <summary type="html">
     
@@ -251,8 +195,111 @@
       
         
         
-          &lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/006Cwrd9gy1fxskn2tpksj31hc0u0guq.jpg&quot; alt=&quot;I love it when a plan comes together.&quot;&gt;&lt;/p&gt;
-&lt;h3
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="设计模式" scheme="https://github.com/ruanjl/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="https://github.com/ruanjl/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>设计模式.三</title>
+    <link href="https://github.com/ruanjl/2018/12/18/she-ji-mo-shi-san/"/>
+    <id>https://github.com/ruanjl/2018/12/18/she-ji-mo-shi-san/</id>
+    <published>2018-12-18T02:28:20.000Z</published>
+    <updated>2019-01-26T14:21:27.744Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="设计模式" scheme="https://github.com/ruanjl/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="https://github.com/ruanjl/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>设计模式.二</title>
+    <link href="https://github.com/ruanjl/2018/12/17/she-ji-mo-shi-er/"/>
+    <id>https://github.com/ruanjl/2018/12/17/she-ji-mo-shi-er/</id>
+    <published>2018-12-17T02:26:24.000Z</published>
+    <updated>2019-01-26T14:21:27.745Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="设计模式" scheme="https://github.com/ruanjl/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="https://github.com/ruanjl/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>设计模式.一</title>
+    <link href="https://github.com/ruanjl/2018/12/16/she-ji-mo-shi-yi/"/>
+    <id>https://github.com/ruanjl/2018/12/16/she-ji-mo-shi-yi/</id>
+    <published>2018-12-16T02:06:39.000Z</published>
+    <updated>2019-01-26T14:21:27.742Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="设计模式" scheme="https://github.com/ruanjl/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="https://github.com/ruanjl/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>QuickSort Application in java</title>
+    <link href="https://github.com/ruanjl/2018/11/25/jdk-de-kuai-su-pai-xu/"/>
+    <id>https://github.com/ruanjl/2018/11/25/jdk-de-kuai-su-pai-xu/</id>
+    <published>2018-11-25T15:07:22.000Z</published>
+    <updated>2019-01-30T04:44:29.885Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
         
       
     
