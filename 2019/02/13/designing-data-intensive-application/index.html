@@ -5,10 +5,15 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="分布式锁究竟应该怎么实现？, 江0">
-    <meta name="description" content="
-背景前几天突然接到任务说要实现一个分布式锁，由于之前有自己实现过一些demo，对各种分布式锁也都有一定的了解，实现的时候会数量一些，但是毕竟是公司直接要拿来用的东西，反复斟酌后才把初期的方案定了下来。
-常用的分布式锁简介基于redis的分">
+    <meta name="keywords" content="读 Designing Data-Intensive Application, 江0">
+    <meta name="description" content="前言
+拜读大佬的书籍，做个笔记，记录下重点的语句。
+
+
+书本内容：
+序言
+
+近几年的软件工程，特别是服务器端和后端系统开发，大量关于数据存储和处理的时髦词汇涌现出来： NoSQL！大数据！Web-Scale！分片！最终一致性！ACID！ C">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +21,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>分布式锁究竟应该怎么实现？ | 江0</title>
+    <title>读 Designing Data-Intensive Application | 江0</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -288,13 +293,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        分布式锁究竟应该怎么实现？
+                        读 Designing Data-Intensive Application
                     </div>
                 </div>
             </div>
@@ -405,8 +410,8 @@
             
             <div class="article-tag">
                 
-                <a href="/tags/分布式/" target="_blank">
-                    <span class="chip bg-color">分布式</span>
+                <a href="/tags/阅读/" target="_blank">
+                    <span class="chip bg-color">阅读</span>
                 </a>
                 
             </div>
@@ -417,15 +422,15 @@
                 <!--<span class="post-cate" style="margin-right: 0px">-->
                     <i class="fa fa-bookmark fa-fw icon-category"></i>
                     
-                    <a href="/categories/分布式/" class="post-category" target="_blank">
-                        分布式
+                    <a href="/categories/设计思想/" class="post-category" target="_blank">
+                        设计思想
                     </a>
                     
                 </span>
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2019-01-22
+                    <i class="fa fa-clock-o fa-fw"></i>2019-02-13
                 </span>
 				
 				
@@ -437,22 +442,31 @@
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><img src="http://ww1.sinaimg.cn/large/006Cwrd9gy1fzfs9sj3xkj31hc0u07de.jpg" alt=""></p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>前几天突然接到任务说要实现一个分布式锁，由于之前有自己实现过一些demo，对各种分布式锁也都有一定的了解，<br>实现的时候会数量一些，但是毕竟是公司直接要拿来用的东西，反复斟酌后才把初期的方案定了下来。</p>
-<h3 id="常用的分布式锁简介"><a href="#常用的分布式锁简介" class="headerlink" title="常用的分布式锁简介"></a>常用的分布式锁简介</h3><p>基于redis的分布式锁</p>
-<ul>
-<li>使用setNX的方式</li>
-<li>直接使用redis官方的redission已经实现好的redLock(有一些人说这才是分布式锁的正确方式，我这里不做评价，详见)</li>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>拜读大佬的书籍，做个笔记，记录下重点的语句。</p>
+</blockquote>
+<hr>
+<p>书本内容：</p>
+<h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><blockquote>
+<ol>
+<li>近几年的软件工程，特别是服务器端和后端系统开发，大量关于数据存储和处理的时髦词汇涌现出来： <strong>NoSQL！大数据！Web-Scale！分片！最终一致性！ACID！ CAP定理！云服务！MapReduce！实时！</strong></li>
+<li>而<strong>数据密集型应用</strong>（data-intensive applications）正在通过使用这些技术进步来推动可能性的边界。当一个应用被称为<strong>数据密集</strong>型的，如果数据是其主要挑战（数据量，数据复杂度或数据变化速度）—— 与之相对的是<strong>计算密集型</strong>，即<strong>处理器速度</strong>是其瓶颈。</li>
+<li>在技术迅速变化的背后总是存在一些持续成立的原则，无论您使用了特定工具的哪个版本。如果理解了这些原则，就可以领会这些工具的适用场景，如何充分利用它们，以及如何避免其中的陷阱.</li>
+</ol>
+</blockquote>
+<h2 id="第一部分：数据系统的基石"><a href="#第一部分：数据系统的基石" class="headerlink" title="第一部分：数据系统的基石"></a>第一部分：数据系统的基石</h2><ol>
+<li>第一章将介绍本书使用的术语和方法。可靠性，可扩展性和可维护性 ，这些词汇到底意味着什么？如何实现这些目标？</li>
+<li>第二章将对几种不同的数据模型和查询语言进行比较。从程序员的角度看，这是数据库之间最明显的区别。不同的数据模型适用于不同的应用场景。</li>
+<li>第三章将深入存储引擎内部，研究数据库如何在磁盘上摆放数据。不同的存储引擎针对不同的负载进行优化，选择合适的存储引擎对系统性能有巨大影响。</li>
+<li>第四章将对几种不同的 数据编码进行比较。特别研究了这些格式在应用需求经常变化、模式需要随时间演变的环境中表现如何。</li>
+</ol>
+<h3 id="第一章：可靠性可，扩展性，可维护性"><a href="#第一章：可靠性可，扩展性，可维护性" class="headerlink" title="第一章：可靠性可，扩展性，可维护性"></a>第一章：可靠性可，扩展性，可维护性</h3><ul>
+<li>现今很多应用程序都是 <strong>数据密集型（data-intensive）</strong> 的，而非 <strong>计算密集型（compute-intensive）</strong> 的。因此CPU很少成为这类应用的瓶颈，更大的问题通常来自数据量、数据复杂性、以及数据的变更速度。<br>一旦系统的负载被描述好，就可以研究当负载增加会发生什么。我们可以从两种角度来看：  </li>
+<li>增加负载参数并保持系统资源（CPU、内存、网络带宽等）不变时，系统性能将受到什么影响？</li>
+<li>增加负载参数并希望保持性能不变时，需要增加多少系统资源？<br>这两个问题都需要性能数据，所以让我们简单地看一下如何描述系统性能。<br>​ 对于Hadoop这样的<strong>批处理系统</strong>，通常关心的是<strong>吞吐量</strong>（throughput），即每秒可以处理的记录数量，或者在特定规模数据集上运行作业的总时间iii。对于在线系统，通常更重要的是服务的<strong>响应时间</strong>（response time），即客户端发送请求到接收响应之间的时间。</li>
 </ul>
-<p>基于zookeeper的分布式锁</p>
-<ul>
-<li>利用zookeeper的顺序临时节点，自旋比较自己的节点是否是节点里的最小值，来获得锁。</li>
-</ul>
-<p>基于etcd的分布式锁</p>
-<ul>
-<li>原理与zookeeper类似</li>
-</ul>
-<h3 id="基于redis分布式锁的具体方案及细节"><a href="#基于redis分布式锁的具体方案及细节" class="headerlink" title="基于redis分布式锁的具体方案及细节"></a>基于redis分布式锁的具体方案及细节</h3>
+<p>​ 即使不断重复发送同样的请求，每次得到的响应时间也都会略有不同。现实世界的系统会处理各式各样的请求，响应时间可能会有很大差异。因此我们需要将<strong>响应时间</strong>视为一个可以测量的<strong>数值分布</strong>（distribution），<strong>而不是单个数值</strong>。</p>
+<h3 id="第二章：数据模型与查询语言"><a href="#第二章：数据模型与查询语言" class="headerlink" title="第二章：数据模型与查询语言"></a>第二章：数据模型与查询语言</h3><h3 id="第三章：存储与检索"><a href="#第三章：存储与检索" class="headerlink" title="第三章：存储与检索"></a>第三章：存储与检索</h3><h3 id="第四章：编码与演化"><a href="#第四章：编码与演化" class="headerlink" title="第四章：编码与演化"></a>第四章：编码与演化</h3><h2 id="第二部分：分布式数据"><a href="#第二部分：分布式数据" class="headerlink" title="第二部分：分布式数据"></a>第二部分：分布式数据</h2><h3 id="第五章：复制"><a href="#第五章：复制" class="headerlink" title="第五章：复制"></a>第五章：复制</h3><h3 id="第六章：分区"><a href="#第六章：分区" class="headerlink" title="第六章：分区"></a>第六章：分区</h3><h3 id="第七章：事务"><a href="#第七章：事务" class="headerlink" title="第七章：事务"></a>第七章：事务</h3><h3 id="第八章：分布式系统的麻烦"><a href="#第八章：分布式系统的麻烦" class="headerlink" title="第八章：分布式系统的麻烦"></a>第八章：分布式系统的麻烦</h3><h3 id="第九章：一致性与共识"><a href="#第九章：一致性与共识" class="headerlink" title="第九章：一致性与共识"></a>第九章：一致性与共识</h3><h2 id="第三部分：派生数据"><a href="#第三部分：派生数据" class="headerlink" title="第三部分：派生数据"></a>第三部分：派生数据</h2><h3 id="第十章：批处理"><a href="#第十章：批处理" class="headerlink" title="第十章：批处理"></a>第十章：批处理</h3><h3 id="第十一章：流处理"><a href="#第十一章：流处理" class="headerlink" title="第十一章：流处理"></a>第十一章：流处理</h3><h3 id="第十二章：数据系统的未来"><a href="#第十二章：数据系统的未来" class="headerlink" title="第十二章：数据系统的未来"></a>第十二章：数据系统的未来</h3>
             </div>
             <hr>
 
@@ -473,7 +487,7 @@
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="https://github.com/ruanjl" class="b-link-green">江0</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/01/22/jiu-jing-ying-gai-zen-me-shi-xian-fen-bu-shi-suo/" class="b-link-green">分布式锁究竟应该怎么实现？</a>
+                    <a href="/2019/02/13/designing-data-intensive-application/" class="b-link-green">读 Designing Data-Intensive Application</a>
                 </p>
             </div>
         </div>
@@ -495,7 +509,7 @@
         repo: 'ruanjl.github.io',
         owner: 'ruanjl',
         admin: ["ruanjl"],
-        id: '2019-01-22T21-54-06',
+        id: '2019-02-13T16-57-48',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -517,57 +531,48 @@
     <div class="row article-row">
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="article-badge left-badge text-color">本篇</div>
             <div class="card">
-                <a href="/2019/01/23/cha-kuai-gai-man-b-shu-gai-kuai-cha-man-lsm-shu/">
+                <a href="/2019/02/13/designing-data-intensive-application/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="查快改慢B+树,改快查慢LSM树">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="读 Designing Data-Intensive Application">
                         
-                        <span class="card-title">查快改慢B+树,改快查慢LSM树</span>
+                        <span class="card-title">读 Designing Data-Intensive Application</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">
-前言
-书本数据结构与算法里面就提到过B树在索引上的应用,而实际应用中一直有许多牛人又对这个数据结构持续做了多优，然这个结构一直有。
+                    <div class="summary">前言
+拜读大佬的书籍，做个笔记，记录下重点的语句。
 
 
-索引文件数据库的索引其实指的是索引文件，而B+树是我们索引文件储存方式。用于给存储引擎(这里指inno</div>
+书本内容：
+序言
+
+近几年的软件工程，特别是服务器端和后端系统开发，大量关于数据存储和处理的时髦词汇涌现出来： NoSQL！大数据！Web-Scale！分片！最终一致性！ACID！ C</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/mysql/" class="post-category" target="_blank">
-                                    mysql
-                                </a>
-                            
-                            <a href="/categories/mysql/数据结构/" class="post-category" target="_blank">
-                                    数据结构
+                            <a href="/categories/设计思想/" class="post-category" target="_blank">
+                                    设计思想
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/数据结构/" target="_blank">
-                        <span class="chip bg-color">数据结构</span>
-                    </a>
-                    
-                    <a href="/tags/mysql/" target="_blank">
-                        <span class="chip bg-color">mysql</span>
-                    </a>
-                    
-                    <a href="/tags/索引/" target="_blank">
-                        <span class="chip bg-color">索引</span>
+                    <a href="/tags/阅读/" target="_blank">
+                        <span class="chip bg-color">阅读</span>
                     </a>
                     
                 </div>
@@ -579,29 +584,31 @@
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2019/01/21/xian-liu-fang-an-dui-bi/">
+                <a href="/2019/01/28/wei-yun-suan-de-na-xie-sao-cao-zuo/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="限流方案对比">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="位运算的那些骚操作">
                         
-                        <span class="card-title">限流方案对比</span>
+                        <span class="card-title">位运算的那些骚操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">广为流传的接口限流方案漏斗桶如果将请求比作是水，水来了都先放进桶里，并以限定的速度出水，桶满会溢出，体现为拒绝服务。漏斗有一个进水口和一个出水口，出水口以一定速率出水，并且有一个最大出水速率。在漏斗中没有水的时候，
+                    <div class="summary">前言
+今天读到了大佬[石杉]的一篇有关算法的文章，决定记录一下这种花操作，虽然之前刷leetCode看到过这样的操作，但是还是容易忘记，所以在这里整理下。后面也思考了有关这个算法的一些扩展。
 
-如果进水速率小于等于最</div>
+起因
+一道说简单又不那么好对付的算法题：数组里</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-21
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-28
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/分布式/" class="post-category" target="_blank">
-                                    分布式
+                            <a href="/categories/算法/" class="post-category" target="_blank">
+                                    算法
                                 </a>
                             
                             
@@ -611,8 +618,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/分布式/" target="_blank">
-                        <span class="chip bg-color">分布式</span>
+                    <a href="/tags/算法/" target="_blank">
+                        <span class="chip bg-color">算法</span>
+                    </a>
+                    
+                    <a href="/tags/leetcode/" target="_blank">
+                        <span class="chip bg-color">leetcode</span>
                     </a>
                     
                 </div>

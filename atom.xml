@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/ruanjl/"/>
-  <updated>2019-01-30T04:59:34.132Z</updated>
+  <updated>2019-04-16T16:41:54.918Z</updated>
   <id>https://github.com/ruanjl/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>读 Designing Data-Intensive Application</title>
+    <link href="https://github.com/ruanjl/2019/02/13/designing-data-intensive-application/"/>
+    <id>https://github.com/ruanjl/2019/02/13/designing-data-intensive-application/</id>
+    <published>2019-02-13T08:57:48.000Z</published>
+    <updated>2019-04-16T16:41:54.918Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="设计思想" scheme="https://github.com/ruanjl/categories/%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3/"/>
+    
+    
+      <category term="阅读" scheme="https://github.com/ruanjl/tags/%E9%98%85%E8%AF%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>位运算的那些骚操作</title>
@@ -49,7 +75,7 @@
     <link href="https://github.com/ruanjl/2019/01/26/hong-hei-shu-rbtree-zai-jdk-zhong-de-shi-xian/"/>
     <id>https://github.com/ruanjl/2019/01/26/hong-hei-shu-rbtree-zai-jdk-zhong-de-shi-xian/</id>
     <published>2019-01-26T02:51:33.000Z</published>
-    <updated>2019-01-26T14:21:27.741Z</updated>
+    <updated>2019-02-20T15:39:24.110Z</updated>
     
     <summary type="html">
     
@@ -107,7 +133,7 @@
     <link href="https://github.com/ruanjl/2019/01/22/jiu-jing-ying-gai-zen-me-shi-xian-fen-bu-shi-suo/"/>
     <id>https://github.com/ruanjl/2019/01/22/jiu-jing-ying-gai-zen-me-shi-xian-fen-bu-shi-suo/</id>
     <published>2019-01-22T13:54:06.000Z</published>
-    <updated>2019-01-26T14:21:27.740Z</updated>
+    <updated>2019-04-16T15:37:00.147Z</updated>
     
     <summary type="html">
     
@@ -291,7 +317,7 @@
     <link href="https://github.com/ruanjl/2018/11/25/jdk-de-kuai-su-pai-xu/"/>
     <id>https://github.com/ruanjl/2018/11/25/jdk-de-kuai-su-pai-xu/</id>
     <published>2018-11-25T15:07:22.000Z</published>
-    <updated>2019-01-30T04:44:29.885Z</updated>
+    <updated>2019-04-16T16:41:54.946Z</updated>
     
     <summary type="html">
     
