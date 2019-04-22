@@ -454,7 +454,7 @@ java中的Arrays.Sort()方法是我们常用的排序方">
 <li>计数排序(用于数值范围小的情况，byte，short，char类型的时候)</li>
 <li>timSort(用于分析本身排序情况)</li>
 </ol>
-<h3 id="大致思路"><a href="#大致思路" class="headerlink" title="大致思路"></a>大致思路</h3><p>尽量发掘各自单一排序算法自己优势，当有合适条件的时候就使用对应的基本排序，并穿插一些实用的优化：</p>
+<h3 id="核心思路"><a href="#核心思路" class="headerlink" title="核心思路"></a>核心思路</h3><p>尽量发掘各自单一排序算法自己优势，当有合适条件的时候就使用对应的基本排序，并穿插一些实用的优化：</p>
 <ol>
 <li>小数据量：插入排序</li>
 <li>适中：快速排序<ul>
@@ -469,7 +469,8 @@ java中的Arrays.Sort()方法是我们常用的排序方">
 </ul>
 </li>
 </ol>
-<h3 id="具体代码-jdk1-8-对int-排序"><a href="#具体代码-jdk1-8-对int-排序" class="headerlink" title="具体代码(jdk1.8#对int[]排序)"></a>具体代码(jdk1.8#对int[]排序)</h3><pre class=" language-java"><code class="language-java">    <span class="token comment" spellcheck="true">/**
+<h3 id="具体代码-jdk1-8对int-的排序"><a href="#具体代码-jdk1-8对int-的排序" class="headerlink" title="具体代码:(jdk1.8对int[]的排序)"></a>具体代码:(jdk1.8对int[]的排序)</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Sort</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">/**
      * 将给定区间数组排序，如果可以的话使用归并排序
      */</span>
     <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">sort</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> left<span class="token punctuation">,</span> <span class="token keyword">int</span> right<span class="token punctuation">,</span>
@@ -515,11 +516,12 @@ java中的Arrays.Sort()方法是我们常用的排序方">
             <span class="token comment" spellcheck="true">// ...... 归并</span>
             <span class="token comment" spellcheck="true">// 结束</span>
         <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>下面是<strong>核心快排</strong>(有点长)我梳理下：</p>
 <ol>
 <li>小范围的用插入排序结束对应区间的排序，跳过</li>
-<li>切分数组成6个区间（不是等分），中间有五个点，排好序</li>
+<li>切分数组成6个区间（不是等分），中间有五个点，把这五个点排好序</li>
 <li>判断这五个点有没有相等的<ul>
 <li>有：双轴三切分<ul>
 <li>前后部分直接递归（转到第一步）</li>
@@ -530,7 +532,8 @@ java中的Arrays.Sort()方法是我们常用的排序方">
 </ul>
 </li>
 </ol>
-<pre class=" language-java"><code class="language-java">    <span class="token comment" spellcheck="true">/**
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Sort</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">/**
      * Sorts the specified range of the array by Dual-Pivot Quicksort.
      */</span>
     <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">sort</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> left<span class="token punctuation">,</span> <span class="token keyword">int</span> right<span class="token punctuation">,</span> <span class="token keyword">boolean</span> leftmost<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -770,6 +773,7 @@ java中的Arrays.Sort()方法是我们常用的排序方">
             <span class="token function">sort</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> great <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> right<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>我承认需要要有点耐心才能看完，如果你认真看完并理解了，看别的代码那就是小菜一碟了 - -。</p>
 <h3 id="总结一下"><a href="#总结一下" class="headerlink" title="总结一下"></a>总结一下</h3><ol>

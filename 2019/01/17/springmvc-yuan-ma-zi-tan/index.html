@@ -461,7 +461,7 @@ http/https的知识。http请求的组成。
 <p>如果入口是从最开始说的话其实是从tomcat的各个过滤器(filter)顺序调用过来的，再由httpServlet拉起springMVC框架的service方法<br>确定方法类型后执行doPost，或者doGet。下面只会会将几个重要过程领出来聊一聊</p>
 </blockquote>
 <h4 id="DispatcherServlet-doDispatch"><a href="#DispatcherServlet-doDispatch" class="headerlink" title="DispatcherServlet.doDispatch()"></a>DispatcherServlet.doDispatch()</h4><blockquote>
-<p>先从10个handlerMappings中的找到对应的handlerMapping,然后从这个handlerMapping通过urlPath，找到对应方法的handler<br> 并将拦截器加入handler组装成HandlerExecutionChain，如果执行HandlerExecutionChain的时候拦截器返回false方法会在止到这里直接返回。<br> 拦截器如果通过，找到能够使用这个handler(Method Handler)的handlerAdapter（一般是这个:RequestMappingHandlerAdapter）（原本有三个找到对应的支持的）<br> 供以后使用，也就是下面的这个方法：</p>
+<p>先从10个handlerMappings中的找到对应的handlerMapping,然后从这个handlerMapping通过urlPath，找到对应方法的handler<br> 并将拦截器加入handler组装成HandlerExecutionChain，如果执行HandlerExecutionChain的时候拦截器返回false方法会在止到这里直接返回。<br> 拦截器如果通过，找到能够使用这个handler(Method Handler)的handlerAdapter（一般是这个:RequestMappingHandlerAdapter）<br> （原本有三个找到对应的支持的） 供以后使用，也就是下面的这个方法：</p>
 </blockquote>
 <h4 id="ServletInvocableHandlerMethod-invokeAndHandle"><a href="#ServletInvocableHandlerMethod-invokeAndHandle" class="headerlink" title="ServletInvocableHandlerMethod.invokeAndHandle()"></a>ServletInvocableHandlerMethod.invokeAndHandle()</h4><blockquote>
 <p>执行里面的方法，并处理返回值<br> a. 设置响应状态，<br> b. 设置mavContainer处理状态设置为未处理完毕。<br> c. 并对返回接口进行处理,responseBody的注解会在这里使用(用于找到返回值的handler)，并进行消息转化(json)</p>
