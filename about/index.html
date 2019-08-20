@@ -327,7 +327,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 
 <div class="statis">
-    <span class="count"><a href="/tags" target="_blank">16</a></span>
+    <span class="count"><a href="/tags" target="_blank">18</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -355,7 +355,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
 
 <div class="statis">
-    <span class="count"><a href="/tags" target="_blank">16</a></span>
+    <span class="count"><a href="/tags" target="_blank">18</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -502,7 +502,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"算法","value":2},{"name":"分布式","value":2},{"name":"数据结构","value":1},{"name":"mysql","value":1},{"name":"springMVC","value":1},{"name":"数据结构","value":1},{"name":"设计思想","value":1}],
+                data: [{"name":"springMVC","value":1},{"name":"mysql","value":1},{"name":"分布式","value":2},{"name":"数据结构","value":1},{"name":"数据结构","value":1},{"name":"算法","value":2},{"name":"设计思想","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -526,7 +526,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
         xAxis: [
             {
                 type: 'category',
-                data: ["分布式","数据结构","paxos","正则","kafka","多线程","并发","dubbo","算法","leetcode"]
+                data: ["分布式","数据结构","正则","多线程","kafka","mysql","索引","源码","paxos","springMVC"]
             }
         ],
         yAxis: [
@@ -539,7 +539,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [3,2,1,1,1,1,1,1,1,1],
+                data: [3,2,2,1,1,1,1,1,1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -700,50 +700,20 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             
             
-            <a href="/tags/算法/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">算法</span>
-            </a>
-            
-            
-            
-            <a href="/tags/leetcode/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">leetcode</span>
-            </a>
-            
-            
-            
             <a href="/tags/正则/" target="_blank">
                 <span class="chip center-align waves-effect waves-light chip-default">正则</span>
             </a>
             
             
             
-            <a href="/tags/分布式/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">分布式</span>
+            <a href="/tags/源码/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">源码</span>
             </a>
             
             
             
-            <a href="/tags/多线程/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">多线程</span>
-            </a>
-            
-            
-            
-            <a href="/tags/并发/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">并发</span>
-            </a>
-            
-            
-            
-            <a href="/tags/dubbo/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">dubbo</span>
-            </a>
-            
-            
-            
-            <a href="/tags/paxos/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">paxos</span>
+            <a href="/tags/springMVC/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">springMVC</span>
             </a>
             
             
@@ -766,14 +736,56 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             
             
-            <a href="/tags/源码/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">源码</span>
+            <a href="/tags/分布式/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">分布式</span>
             </a>
             
             
             
-            <a href="/tags/springMVC/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">springMVC</span>
+            <a href="/tags/paxos/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">paxos</span>
+            </a>
+            
+            
+            
+            <a href="/tags/多线程/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">多线程</span>
+            </a>
+            
+            
+            
+            <a href="/tags/并发/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">并发</span>
+            </a>
+            
+            
+            
+            <a href="/tags/dubbo/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">dubbo</span>
+            </a>
+            
+            
+            
+            <a href="/tags/callable/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">callable</span>
+            </a>
+            
+            
+            
+            <a href="/tags/future/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">future</span>
+            </a>
+            
+            
+            
+            <a href="/tags/算法/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">算法</span>
+            </a>
+            
+            
+            
+            <a href="/tags/leetcode/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">leetcode</span>
             </a>
             
             

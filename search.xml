@@ -8,9 +8,15 @@
       <link href="/2019/08/18/qiang-da-de-zheng-ze-dai-ni-huo-qu-ni-xiang-yao-de-ge-chong-shu-ju/"/>
       <url>/2019/08/18/qiang-da-de-zheng-ze-dai-ni-huo-qu-ni-xiang-yao-de-ge-chong-shu-ju/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>作为程序员，爬虫虽然强大，但是记得规范自己的行为，不要做违法的事情。</p><h3 id="普通的标签爬取"><a href="#普通的标签爬取" class="headerlink" title="普通的标签爬取"></a>普通的标签爬取</h3><p>普通的标签爬取是最基本的爬取工作直接复制粘贴就可以拿到自己想要的数据了，<br>但是很多网站并不会然你这么轻松的就获取到它的数据，很多网站爬取的时候就只是一堆js字符串，我们并不能通过标签拿到<br>对应的数据。这种情况写就需要要我们拿出最厉害的杀手锏了：正则！</p><h3 id="正则的威力"><a href="#正则的威力" class="headerlink" title="正则的威力"></a>正则的威力</h3><p>其实网页都会有他么自己的特点，我们需要做的就是分析它的特点后使用正则拿到它或者替换他。</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>作为程序员，爬虫虽然强大，但是记得规范自己的行为，不要做违法的事情。</p><h3 id="普通的标签爬取"><a href="#普通的标签爬取" class="headerlink" title="普通的标签爬取"></a>普通的标签爬取</h3><p>普通的标签爬取是最基本的爬取工作直接复制粘贴就可以拿到自己想要的数据了，<br>但是很多网站并不会然你这么轻松的就获取到它的数据，很多网站爬取的时候就只是一堆js字符串，我们并不能通过标签拿到<br>对应的数据。这种情况写就需要要我们拿出最厉害的杀手锏了：正则！</p><h3 id="正则的威力"><a href="#正则的威力" class="headerlink" title="正则的威力"></a>正则的威力</h3><p>网页一般都会有他么自己的特点，我们需要做的就是分析它的特点，拿到对应的链接或者内容，但是有一些网站渲染的时候我们拿不到对应的html，拿到的<br>只是一堆js字符串，这样我们没法通过xpath或者selector去找到我们想要的内容，我们只好使出杀手锏正则了，说到正则我想大多数人的第一映像应该是<br>像号码邮箱这样的校验正则。这只是最基本的应用，厉害的地方就是可以从一堆奇怪的字符串里面提取出自己想要的内容。下面讲两个十分实用的正则。</p><h3 id="贪心与非贪心，反向引用"><a href="#贪心与非贪心，反向引用" class="headerlink" title="贪心与非贪心，反向引用"></a>贪心与非贪心，反向引用</h3><p>利用正则爬取数据的最核心应该就是贪心与非贪心的应用了，因为网页里面有重复的字符串太常见了，我们首先得找出唯一的字符串，一般情况下是使用<strong>非贪心(.*?)</strong><br>来定位到数据的开始再使用<strong>非贪心(.*?)</strong> 定位到数据的结尾，然后使用 <strong>获取匹配</strong>的替换符号($1, $2, $3)将数据提取出来即可。<br>例如我要爬取这段字符串里面的<img src="www.baidu.com" alt="图片链接"> 的链接只需要使用这个正则<img src="(.*?)" alt="图片链接">然后用$1替换即可。</p><h3 id="正向预查与反向预查找"><a href="#正向预查与反向预查找" class="headerlink" title="正向预查与反向预查找"></a>正向预查与反向预查找</h3><p>有时候可能有很多种情况都瞒住我们的正则，但是我们只需要和某些字相关的匹配项，我们可以使用预查找，意思就是后面或者前面得是我指定的那些值的匹配项我才需要：<br>例如：aaabbbaaacccaaaddd 如果我只要后面是ccc的那个aaa字符串我们可以使用<br><strong>正向预查</strong>：aaa(?=ccc)来匹配，这个只会匹配第二个aaa，又或者我们只要前面是ccc的那个aaa我们可以使用<br><strong>反向预查</strong>：aaa(?&lt;=ccc)这样会匹配第三个aaa，也就是aaa的左边是ccc的那个aaa。</p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> 正则 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -32,6 +38,10 @@
             <tag> 并发 </tag>
             
             <tag> dubbo </tag>
+            
+            <tag> callable </tag>
+            
+            <tag> future </tag>
             
         </tags>
       

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/ruanjl/"/>
-  <updated>2019-08-18T07:58:45.009Z</updated>
+  <updated>2019-08-20T14:44:22.694Z</updated>
   <id>https://github.com/ruanjl/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://github.com/ruanjl/2019/08/18/qiang-da-de-zheng-ze-dai-ni-huo-qu-ni-xiang-yao-de-ge-chong-shu-ju/"/>
     <id>https://github.com/ruanjl/2019/08/18/qiang-da-de-zheng-ze-dai-ni-huo-qu-ni-xiang-yao-de-ge-chong-shu-ju/</id>
     <published>2019-08-18T07:51:46.000Z</published>
-    <updated>2019-08-18T07:58:45.009Z</updated>
+    <updated>2019-08-20T14:44:22.694Z</updated>
     
     <summary type="html">
     
@@ -36,6 +36,8 @@
     </summary>
     
     
+      <category term="正则" scheme="https://github.com/ruanjl/tags/%E6%AD%A3%E5%88%99/"/>
+    
   </entry>
   
   <entry>
@@ -43,7 +45,7 @@
     <link href="https://github.com/ruanjl/2019/07/20/ji-yi-ci-sheng-chan-duo-xian-cheng-shu-ju-dao-chu-bug-pai-cha/"/>
     <id>https://github.com/ruanjl/2019/07/20/ji-yi-ci-sheng-chan-duo-xian-cheng-shu-ju-dao-chu-bug-pai-cha/</id>
     <published>2019-07-20T07:24:42.000Z</published>
-    <updated>2019-08-18T07:38:10.864Z</updated>
+    <updated>2019-08-20T14:16:35.456Z</updated>
     
     <summary type="html">
     
@@ -63,6 +65,10 @@
       <category term="并发" scheme="https://github.com/ruanjl/tags/%E5%B9%B6%E5%8F%91/"/>
     
       <category term="dubbo" scheme="https://github.com/ruanjl/tags/dubbo/"/>
+    
+      <category term="callable" scheme="https://github.com/ruanjl/tags/callable/"/>
+    
+      <category term="future" scheme="https://github.com/ruanjl/tags/future/"/>
     
   </entry>
   
