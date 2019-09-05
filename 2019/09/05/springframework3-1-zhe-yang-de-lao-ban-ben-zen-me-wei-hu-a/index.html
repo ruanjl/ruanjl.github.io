@@ -5,9 +5,9 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="强大的正则:带你获取你想要的各种数据, 江0">
-    <meta name="description" content="说明作为程序员，爬虫虽然强大，但是记得规范自己的行为，不要做违法的事情。
-普通的标签爬取普通的标签爬取是最基本的爬取工作直接复制粘贴就可以拿到自己想要的数据了，但是很多网站并不会然你这么轻松的就获取到它的数据，很多网站爬取的时候就只是一堆j">
+    <meta name="keywords" content="springFramework3.1这样的老版本怎么维护啊？, 江0">
+    <meta name="description" content="能活下来的老项目是宝我们不可能一直是使用最新的技术，是项目总会成为过去，而项目能活下来也是不容易的,都是有他的价值的，而这个时候如果让你顶上去维护老项目你能行么？真的，你能行么？
+起因最近项目先是出了一个bug，是由于技术栈的变更导致的，也">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>强大的正则:带你获取你想要的各种数据 | 江0</title>
+    <title>springFramework3.1这样的老版本怎么维护啊？ | 江0</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -293,7 +293,7 @@
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        强大的正则:带你获取你想要的各种数据
+                        springFramework3.1这样的老版本怎么维护啊？
                     </div>
                 </div>
             </div>
@@ -404,8 +404,12 @@
             
             <div class="article-tag">
                 
-                <a href="/tags/正则/" target="_blank">
-                    <span class="chip bg-color">正则</span>
+                <a href="/tags/springFramework3-1/" target="_blank">
+                    <span class="chip bg-color">springFramework3.1</span>
+                </a>
+                
+                <a href="/tags/rabbitMq/" target="_blank">
+                    <span class="chip bg-color">rabbitMq</span>
                 </a>
                 
             </div>
@@ -414,7 +418,7 @@
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2019-08-18
+                    <i class="fa fa-clock-o fa-fw"></i>2019-09-05
                 </span>
 				
 				
@@ -426,12 +430,12 @@
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>作为程序员，爬虫虽然强大，但是记得规范自己的行为，不要做违法的事情。</p>
-<h3 id="普通的标签爬取"><a href="#普通的标签爬取" class="headerlink" title="普通的标签爬取"></a>普通的标签爬取</h3><p>普通的标签爬取是最基本的爬取工作直接复制粘贴就可以拿到自己想要的数据了，<br>但是很多网站并不会然你这么轻松的就获取到它的数据，很多网站爬取的时候就只是一堆js字符串，我们并不能通过标签拿到<br>对应的数据。这种情况写就需要要我们拿出最厉害的杀手锏了：正则！</p>
-<h3 id="正则的威力"><a href="#正则的威力" class="headerlink" title="正则的威力"></a>正则的威力</h3><p>网页一般都会有他么自己的特点，我们需要做的就是分析它的特点，拿到对应的链接或者内容，但是有一些网站渲染的时候我们拿不到对应的html，拿到的<br>只是一堆js字符串，这样我们没法通过xpath或者selector去找到我们想要的内容，我们只好使出杀手锏正则了，说到正则我想大多数人的第一映像应该是<br>像号码邮箱这样的校验正则。这只是最基本的应用，厉害的地方就是可以从一堆奇怪的字符串里面提取出自己想要的内容。下面讲两个十分实用的正则。</p>
-<h3 id="贪心与非贪心，反向引用"><a href="#贪心与非贪心，反向引用" class="headerlink" title="贪心与非贪心，反向引用"></a>贪心与非贪心，反向引用</h3><p>利用正则爬取数据的最核心应该就是贪心与非贪心的应用了，因为网页里面有重复的字符串太常见了，我们首先得找出唯一的字符串，一般情况下是使用<strong>非贪心(.*?)</strong><br>来定位到数据的开始再使用<strong>非贪心(.*?)</strong> 定位到数据的结尾，然后使用 <strong>获取匹配</strong>的替换符号($1, $2, $3)将数据提取出来即可。<br>例如我要爬取这段字符串里面的\&lt;img src=”<a href="http://www.baidu.com&quot;" target="_blank" rel="noopener">www.baidu.com&quot;</a> alt=”图片链接”> 的链接只需要使用这个正则\&lt;img src=”(.*?)” alt=”图片链接”>然后用  $1替换即可。</p>
-<h3 id="正向预查与反向预查找"><a href="#正向预查与反向预查找" class="headerlink" title="正向预查与反向预查找"></a>正向预查与反向预查找</h3><p>有时候可能有很多种情况都瞒住我们的正则，但是我们只需要和某些字相关的匹配项，我们可以使用预查找，意思就是后面或者前面得是我指定的那些值的匹配项我才需要：<br>例如：aaabbbaaacccaaaddd 如果我只要后面是ccc的那个aaa字符串我们可以使用<br><strong>正向预查</strong>：aaa(?=ccc)来匹配，这个只会匹配第二个aaa，又或者我们只要前面是ccc的那个aaa我们可以使用<br><strong>反向预查</strong>：aaa(?&lt;=ccc)这样会匹配第三个aaa，也就是aaa的左边是ccc的那个aaa。</p>
-<h3 id="来实战一把："><a href="#来实战一把：" class="headerlink" title="来实战一把："></a>来实战一把：</h3><p>比如我爬取一个微博的博文链接，爬取下来的全部都是这样的js字符串：<img src="/images/20190820225155.png" alt=""><br>我没有办法使用xpath或者selector去获取内容，使用正则获取原网页的图片并替换之后获取到如下内容：<br>“<a href="https://wx4.sinaimg.cn/large/76ad419cly1g1f1gxgaiuj20gg088myo.jpg&quot;。" target="_blank" rel="noopener">https://wx4.sinaimg.cn/large/76ad419cly1g1f1gxgaiuj20gg088myo.jpg&quot;。</a></p>
+                <h3 id="能活下来的老项目是宝"><a href="#能活下来的老项目是宝" class="headerlink" title="能活下来的老项目是宝"></a>能活下来的老项目是宝</h3><p>我们不可能一直是使用最新的技术，是项目总会成为过去，而项目能活下来也是不容易的,都是有他的价值的，而这个时候如果让你顶上去维护<br>老项目你能行么？真的，你能行么？</p>
+<h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>最近项目先是出了一个bug，是由于技术栈的变更导致的，也就是从activeMq转变为rabbitMQ这一块。遇到了一个坑。是有关延时队列的使用，<br>由于rabbiMq的延时队列是使用死信队列实现的，而这个队列是一个单向阻塞队列，如果一个等待时间长的先入队，那么后面等待时间短的元素要<br>等到前面的元素出队列以后才能继续出队。这样会造成消息无法按时出队，于是网上搜索了下解决方案，很快就搜索到了，使用一个rabbitMq延时<br>插件既可以实现想要的功能。但是问题却来了</p>
+<h3 id="springFramework3-1老项目"><a href="#springFramework3-1老项目" class="headerlink" title="springFramework3.1老项目"></a>springFramework3.1老项目</h3><p>老项目的配置都是使用xml维护的，而网上的解决方案都是基于springboot的解决方案，spring Framework的解决延时队列的方案我是没有找到<br>于是我只好将对应配置的配置项都看了一遍，因为根本就没有对应的标签，于是我想着使用@bean 标签去注入，结果发现无法注入，因为这个spring<br>的版本确实是比较低的，专门上网搜索了下才看到，这个版本是刚刚出@bean这个注解的时候，这个时候的这个注解功能还处于特别低级的情况。<br>因为官方文档上面基本都还是在使用xml。这是我们@bean @configuration注解刚刚出道的时候。</p>
+<h3 id="无法注入"><a href="#无法注入" class="headerlink" title="无法注入"></a>无法注入</h3><p>我按照官网的方法使用@bean 去注入，很多情况都无法注入，最后找到一种方法可以注入(我怀疑这个版本的@bean @configuration注解还没什么用处)<br>显示需要在xml里面声明一个@bean标签 然后使用@component 注解来申明写@bean注解的这个java。而且这个不能使用@configuration这个注解<br>只要一使用这个注解就会找不到注入的方法。及时是这个方法我也弄了好久才找到的。因为注入的方法有点多，而我又在怀疑是不是我的方法有问题，<br>当我把官网的例子拿出来发现也不行的时候我就开始有着死马活马医的心态了。</p>
+<h3 id="如何依赖"><a href="#如何依赖" class="headerlink" title="如何依赖"></a>如何依赖</h3><p>虽然可以注入想要类型的bean了那么最大的一个问题来了，如何依赖呢？因为我们直接用的这个bean是没有上下文的，也就无法真正的起作用，于是我开始<br>使用ApplicationContext来获取上下文来获取对应的bean后注入，也是报了一堆错误，因为不能将他们一起初始化，ApplicationContext需要单独拿出来<br>写成静态工具类，还要保证对应的初始化顺序，这个简单，使用了个@dependOn注解即可。最后试了一把，居然真可以按着预期的运行。这个班没有白加。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>老项目的维护还是需要耐心，要懂得现在的技术封装如此高级，我们最好能使用原来的老技术也可以实现！这个确实是一个比较难得的能力！</p>
 
             </div>
             <hr>
@@ -453,7 +457,7 @@
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="https://github.com/ruanjl" class="b-link-green">江0</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/08/18/qiang-da-de-zheng-ze-dai-ni-huo-qu-ni-xiang-yao-de-ge-chong-shu-ju/" class="b-link-green">强大的正则:带你获取你想要的各种数据</a>
+                    <a href="/2019/09/05/springframework3-1-zhe-yang-de-lao-ban-ben-zen-me-wei-hu-a/" class="b-link-green">springFramework3.1这样的老版本怎么维护啊？</a>
                 </p>
             </div>
         </div>
@@ -475,7 +479,7 @@
         repo: 'ruanjl.github.io',
         owner: 'ruanjl',
         admin: ["ruanjl"],
-        id: '2019-08-18T15-51-46',
+        id: '2019-09-05T23-08-04',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -497,7 +501,7 @@
     <div class="row article-row">
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="article-badge left-badge text-color">本篇</div>
             <div class="card">
                 <a href="/2019/09/05/springframework3-1-zhe-yang-de-lao-ban-ben-zen-me-wei-hu-a/">
                     <div class="card-image">
@@ -512,9 +516,9 @@
                     <div class="summary">能活下来的老项目是宝我们不可能一直是使用最新的技术，是项目总会成为过去，而项目能活下来也是不容易的,都是有他的价值的，而这个时候如果让你顶上去维护老项目你能行么？真的，你能行么？
 起因最近项目先是出了一个bug，是由于技术栈的变更导致的，也</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -523,6 +527,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -543,20 +548,21 @@
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2019/07/20/ji-yi-ci-sheng-chan-duo-xian-cheng-shu-ju-dao-chu-bug-pai-cha/">
+                <a href="/2019/08/18/qiang-da-de-zheng-ze-dai-ni-huo-qu-ni-xiang-yao-de-ge-chong-shu-ju/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="记一次生产多线程数据导出bug排查">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="强大的正则:带你获取你想要的各种数据">
                         
-                        <span class="card-title">记一次生产多线程数据导出bug排查</span>
+                        <span class="card-title">强大的正则:带你获取你想要的各种数据</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">事情由来:同事在写一个数据导出的需求的时候遇到个问题，调用dubbo后没响应，排查后是dubbo数据量多无法传输，于是我用idea的evaluation动态调整了数据量的大小去运行，发现大概要到500条数据左右的时候consumer才能得到</div>
+                    <div class="summary">说明作为程序员，爬虫虽然强大，但是记得规范自己的行为，不要做违法的事情。
+普通的标签爬取普通的标签爬取是最基本的爬取工作直接复制粘贴就可以拿到自己想要的数据了，但是很多网站并不会然你这么轻松的就获取到它的数据，很多网站爬取的时候就只是一堆j</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-20
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-08-18
                             </span>
                         <span class="publish-author">
                             
@@ -569,24 +575,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/多线程/" target="_blank">
-                        <span class="chip bg-color">多线程</span>
-                    </a>
-                    
-                    <a href="/tags/并发/" target="_blank">
-                        <span class="chip bg-color">并发</span>
-                    </a>
-                    
-                    <a href="/tags/dubbo/" target="_blank">
-                        <span class="chip bg-color">dubbo</span>
-                    </a>
-                    
-                    <a href="/tags/callable/" target="_blank">
-                        <span class="chip bg-color">callable</span>
-                    </a>
-                    
-                    <a href="/tags/future/" target="_blank">
-                        <span class="chip bg-color">future</span>
+                    <a href="/tags/正则/" target="_blank">
+                        <span class="chip bg-color">正则</span>
                     </a>
                     
                 </div>

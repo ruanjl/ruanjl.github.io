@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/ruanjl/"/>
-  <updated>2019-08-20T15:01:37.879Z</updated>
+  <updated>2019-09-05T15:43:10.037Z</updated>
   <id>https://github.com/ruanjl/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>springFramework3.1这样的老版本怎么维护啊？</title>
+    <link href="https://github.com/ruanjl/2019/09/05/springframework3-1-zhe-yang-de-lao-ban-ben-zen-me-wei-hu-a/"/>
+    <id>https://github.com/ruanjl/2019/09/05/springframework3-1-zhe-yang-de-lao-ban-ben-zen-me-wei-hu-a/</id>
+    <published>2019-09-05T15:08:04.000Z</published>
+    <updated>2019-09-05T15:43:10.037Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="springFramework3.1" scheme="https://github.com/ruanjl/tags/springFramework3-1/"/>
+    
+      <category term="rabbitMq" scheme="https://github.com/ruanjl/tags/rabbitMq/"/>
+    
+  </entry>
+  
+  <entry>
     <title>强大的正则:带你获取你想要的各种数据</title>
     <link href="https://github.com/ruanjl/2019/08/18/qiang-da-de-zheng-ze-dai-ni-huo-qu-ni-xiang-yao-de-ge-chong-shu-ju/"/>
     <id>https://github.com/ruanjl/2019/08/18/qiang-da-de-zheng-ze-dai-ni-huo-qu-ni-xiang-yao-de-ge-chong-shu-ju/</id>
     <published>2019-08-18T07:51:46.000Z</published>
-    <updated>2019-08-20T15:01:37.879Z</updated>
+    <updated>2019-09-05T15:06:45.543Z</updated>
     
     <summary type="html">
     
@@ -99,7 +125,7 @@
     <link href="https://github.com/ruanjl/2019/06/01/liao-liao-paxos/"/>
     <id>https://github.com/ruanjl/2019/06/01/liao-liao-paxos/</id>
     <published>2019-06-01T15:27:51.000Z</published>
-    <updated>2019-08-20T15:09:27.861Z</updated>
+    <updated>2019-08-26T12:40:25.732Z</updated>
     
     <summary type="html">
     
