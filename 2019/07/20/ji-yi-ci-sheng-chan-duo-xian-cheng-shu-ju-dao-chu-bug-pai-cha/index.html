@@ -120,7 +120,7 @@
         <div class="logo-name">江0</div>
         <div class="logo-desc">
             
-            I would rather make a mistake than to miss it.
+            Cease to struggle and you cease to live.
             
         </div>
     </div>
@@ -443,7 +443,12 @@
             <div id="articleContent">
                 <h3 id="事情由来"><a href="#事情由来" class="headerlink" title="事情由来:"></a>事情由来:</h3><p>同事在写一个数据导出的需求的时候遇到个问题，调用dubbo后没响应，排查后是dubbo数据量多无法传输，<br>于是我用idea的evaluation动态调整了数据量的大小去运行，发现大概要到500条数据左右的时候consumer才能<br>得到响应，后来同事便调整了一下数据量，使用了线程池和callable,future来导出。于是bug开始产生了.  </p>
 <h3 id="发展："><a href="#发展：" class="headerlink" title="发展："></a>发展：</h3><p>同事代码写完后，数据接口调用的时间很长，得有二十来秒吧。由于需求来的<strong>又快又急</strong>，便匆忙上线了，结果第二<br>天使用的时候发现有的时候数据导出不完全正确，bug时有时无的。我开始还没有在意，直到他们一直在那里讨<br>论，而且这个需求已经耽误比较久了，于是想着反正我事情也做完了，我便看一下是什么鬼东西在作怪。</p>
-<h3 id="入手："><a href="#入手：" class="headerlink" title="入手："></a>入手：</h3><p>刚开始看代码的时候是这样的：各种奇怪的逻辑，就不贴上来的，贴上一段主要问题所在的那一段：<br>主要的逻辑是这样的：<br>先用查询参数查出数据量,<br>然后给每个线程指定一定的分页页数,<br>查询后,通过future的get方法拿出来放入到结果中……</p>
+<h3 id="入手："><a href="#入手：" class="headerlink" title="入手："></a>入手：</h3><p>刚开始看代码的时候是这样的：各种奇怪的逻辑，就不贴上来的，贴上一段主要问题所在的那一段：<br>主要的逻辑是这样的：</p>
+<ol>
+<li>先用查询参数查出数据量,</li>
+<li>然后给每个线程指定一定的分页页数,</li>
+<li>查询后,通过future的get方法拿出来放入到结果中……</li>
+</ol>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">controller</span><span class="token punctuation">{</span>
 
     <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"/exportExcel"</span><span class="token punctuation">)</span>
@@ -523,14 +528,15 @@
 <span class="token punctuation">}</span>
 
 </code></pre>
-<p>额，应该是写多线程写的确实比较少吧，一拿到这块代码感觉改的地方至少有三点了，</p>
+<p>可能是同事是写多线程这块写的确实比较少吧，一拿到这块代码感觉改的地方至少有三点了，</p>
 <ol>
 <li>主要是线程池的使用是一方面，</li>
 <li>还有就是<strong>线程安全</strong>的一些问题。</li>
-<li>线程的创建记得只写核心参数不要无用参数。<br>好了，最重要的东西来了，为什么接口有时候正确有时候又不正确呢？</li>
+<li>线程的创建记得只写核心参数不要无用参数。  </li>
 </ol>
-<h4 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h4><p>前后代码看了看，只可能是多线程这里的使用出了问题：仔细看一下线程的代码有将queryParam这个<br>参数传入线程里重新set页然后数去查询。但是这里可是只有一个queryParam对象啊，那么多线程去setPage() 然后交给线程池，<br>你能线程保证自己去拿的时候是自己set的那个分页参数么？显然是有线程安全问题的。线程执行的时候不一定拿到的是自己set的分页参数！</p>
-<p>初步定位到了问题我改善了下这小部分代码<br>验证的代码：</p>
+<p><strong>还有，最重要的东西来了，为什么接口有时候数据正确有时候又不正确呢？</strong></p>
+<h4 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h4><p>前后代码看了看，注意到：<strong>线程的代码有将queryParam</strong>这个参数传入线程里<strong>重新set页</strong>然后数去查询。但是这里可是只有<strong>一个queryParam</strong>对象啊，那么多线程去setPage() 然后交给线程池，你能线程保证自己去拿的时候是自己set的那个分页参数么？显然是有线程安全问题的。线程执行的时候不一定拿到的是自己set的分页参数！</p>
+<p>初步定位到了问题我改善了下这小部分代码(其实可以单独传这个参数来更加直接的解决问题)<br>验证的代码：</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Controller</span><span class="token punctuation">{</span>
 
     <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"/exportExcel"</span><span class="token punctuation">)</span>
@@ -593,9 +599,9 @@
 <li>线程问题，安全这些线程都应该用自己的分页参数去请求，接口所以必须得clone(深度)或者copy一个新的对象才可以。</li>
 <li>worker的优化：只要两个不可缺的关键参数(还有就是copy的任务交给线程，不要让主线程做这么无聊的事情)</li>
 <li>直接交个线程池处理后再去使用Future去取得结果。</li>
-<li>不用去shutdown线程池，如果你是自己创建的线程池，他自己会管理自己。</li>
+<li>不用去shutdown线程池，如果你是自己创建的线程池，他自己会管理自己，这样会阻塞主线程，导致请求任务十分缓慢。</li>
 </ol>
-<p>这篇文章对那些大佬是没什么提升的，对于没有接触过多线程，Callable,Future等等的人来说这些东西确实是比较棘手的,<br>但是只要认真分析出问题的代码行附近，认真分析对比还是比较快速就能得到答案的。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>这篇文章对那些大佬是没什么提升的，对于没有接触过多线程，Callable,Future等等的人来说这些东西确实是比较棘手的, 但是只要认真分析出问题的代码行附近，认真分析对比还是比较快速就能得到答案的。</p>
 
             </div>
             <hr>

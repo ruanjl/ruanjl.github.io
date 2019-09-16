@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="keywords" content="分布式锁究竟应该怎么实现？, 江0">
     <meta name="description" content="
-背景前几天突然接到任务说要实现一个分布式锁，由于之前有自己实现过一些demo，对各种分布式锁也都有一定的了解，实现的时候会数量一些，但是毕竟是公司直接要拿来用的东西，反复斟酌后才把初期的方案定了下来。
+背景前几天突然接到任务说要实现一个分布式锁，由于之前有自己实现过一些demo，对各种分布式锁也都有一定的了解，实现的时候会熟练一些，但是毕竟是公司直接要拿来用的东西，反复斟酌后才把初期的方案定了下来。
 常用的分布式锁简介基于redis的分">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -122,7 +122,7 @@
         <div class="logo-name">江0</div>
         <div class="logo-desc">
             
-            I would rather make a mistake than to miss it.
+            Cease to struggle and you cease to live.
             
         </div>
     </div>
@@ -438,7 +438,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p><img src="http://ww1.sinaimg.cn/large/006Cwrd9gy1fzfs9sj3xkj31hc0u07de.jpg" alt=""></p>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>前几天突然接到任务说要实现一个分布式锁，由于之前有自己实现过一些demo，对各种分布式锁也都有一定的了解，<br>实现的时候会数量一些，但是毕竟是公司直接要拿来用的东西，反复斟酌后才把初期的方案定了下来。</p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>前几天突然接到任务说要实现一个分布式锁，由于之前有自己实现过一些demo，对各种分布式锁也都有一定的了解，<br>实现的时候会熟练一些，但是毕竟是公司直接要拿来用的东西，反复斟酌后才把初期的方案定了下来。</p>
 <h3 id="常用的分布式锁简介"><a href="#常用的分布式锁简介" class="headerlink" title="常用的分布式锁简介"></a>常用的分布式锁简介</h3><p>基于redis的分布式锁</p>
 <ul>
 <li>使用setNX的方式</li>
@@ -447,6 +447,7 @@
 <p>基于zookeeper的分布式锁</p>
 <ul>
 <li>利用zookeeper的顺序临时节点，自旋比较自己的节点是否是节点里的最小值，来获得锁。</li>
+<li>需要注意羊群效应，指定node监听自己前面的node即可</li>
 </ul>
 <p>基于etcd的分布式锁</p>
 <ul>

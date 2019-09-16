@@ -122,7 +122,7 @@
         <div class="logo-name">江0</div>
         <div class="logo-desc">
             
-            I would rather make a mistake than to miss it.
+            Cease to struggle and you cease to live.
             
         </div>
     </div>
@@ -492,7 +492,7 @@
 <h2 id="还有那些简单易懂的"><a href="#还有那些简单易懂的" class="headerlink" title="还有那些简单易懂的?"></a>还有那些简单易懂的?</h2><p>限流方案有很多他们有各自的使用场景，下面看两个有关key的限流</p>
 <h3 id="环形窗口"><a href="#环形窗口" class="headerlink" title="环形窗口"></a>环形窗口</h3><h4 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h4><ul>
 <li>用定时任务维护一个环，头结点走完一周的时间是指定的窗口时间</li>
-<li>每次访问key或者接口的时候见时间戳放入环内，头结点碰到的节点都会充值<br>####</li>
+<li>每次访问key或者接口的时候将时间戳放入环内，头结点碰到的节点都会重置。<br>####</li>
 <li>优势可以异步维护各自的key的访问量，而不用主线程每次去判断</li>
 <li><h3 id="定制窗口"><a href="#定制窗口" class="headerlink" title="定制窗口"></a>定制窗口</h3></li>
 <li>每次请求记录时间戳，查看当前窗口内的节点数目，并将窗口外的节点删除</li>
@@ -577,7 +577,7 @@
                 </a>
                 <div class="card-content article-content">
                     <div class="summary">
-背景前几天突然接到任务说要实现一个分布式锁，由于之前有自己实现过一些demo，对各种分布式锁也都有一定的了解，实现的时候会数量一些，但是毕竟是公司直接要拿来用的东西，反复斟酌后才把初期的方案定了下来。
+背景前几天突然接到任务说要实现一个分布式锁，由于之前有自己实现过一些demo，对各种分布式锁也都有一定的了解，实现的时候会熟练一些，但是毕竟是公司直接要拿来用的东西，反复斟酌后才把初期的方案定了下来。
 常用的分布式锁简介基于redis的分</div>
                     <div class="publish-info">
                         <span class="publish-date">

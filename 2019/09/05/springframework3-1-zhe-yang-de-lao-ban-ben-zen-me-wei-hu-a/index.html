@@ -6,8 +6,8 @@
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <meta name="keywords" content="springFramework3.1这样的老版本怎么维护啊？, 江0">
-    <meta name="description" content="能活下来的老项目是宝我们不可能一直是使用最新的技术，是项目总会成为过去，而项目能活下来也是不容易的,都是有他的价值的，而这个时候如果让你顶上去维护老项目你能行么？真的，你能行么？
-起因最近项目先是出了一个bug，是由于技术栈的变更导致的，也">
+    <meta name="description" content="能活下来的老项目是宝我们不可能一直是使用最新的技术，是项目总会成为过去，而项目能活下来也是不容易的,都是有他的价值的，而这个时候如果让你顶上去维护老项目你能行么。
+起因最近由于技术栈的变更, 也就是从activeMq转变为rabbitMQ这">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -121,7 +121,7 @@
         <div class="logo-name">江0</div>
         <div class="logo-desc">
             
-            I would rather make a mistake than to miss it.
+            Cease to struggle and you cease to live.
             
         </div>
     </div>
@@ -430,12 +430,19 @@
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="能活下来的老项目是宝"><a href="#能活下来的老项目是宝" class="headerlink" title="能活下来的老项目是宝"></a>能活下来的老项目是宝</h3><p>我们不可能一直是使用最新的技术，是项目总会成为过去，而项目能活下来也是不容易的,都是有他的价值的，而这个时候如果让你顶上去维护<br>老项目你能行么？真的，你能行么？</p>
-<h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>最近项目先是出了一个bug，是由于技术栈的变更导致的，也就是从activeMq转变为rabbitMQ这一块。遇到了一个坑。是有关延时队列的使用，<br>由于rabbiMq的延时队列是使用死信队列实现的，而这个队列是一个单向阻塞队列，如果一个等待时间长的先入队，那么后面等待时间短的元素要<br>等到前面的元素出队列以后才能继续出队。这样会造成消息无法按时出队，于是网上搜索了下解决方案，很快就搜索到了，使用一个rabbitMq延时<br>插件既可以实现想要的功能。但是问题却来了</p>
-<h3 id="springFramework3-1老项目"><a href="#springFramework3-1老项目" class="headerlink" title="springFramework3.1老项目"></a>springFramework3.1老项目</h3><p>老项目的配置都是使用xml维护的，而网上的解决方案都是基于springboot的解决方案，spring Framework的解决延时队列的方案我是没有找到<br>于是我只好将对应配置的配置项都看了一遍，因为根本就没有对应的标签，于是我想着使用@bean 标签去注入，结果发现无法注入，因为这个spring<br>的版本确实是比较低的，专门上网搜索了下才看到，这个版本是刚刚出@bean这个注解的时候，这个时候的这个注解功能还处于特别低级的情况。<br>因为官方文档上面基本都还是在使用xml。这是我们@bean @configuration注解刚刚出道的时候。</p>
-<h3 id="无法注入"><a href="#无法注入" class="headerlink" title="无法注入"></a>无法注入</h3><p>我按照官网的方法使用@bean 去注入，很多情况都无法注入，最后找到一种方法可以注入(我怀疑这个版本的@bean @configuration注解还没什么用处)<br>显示需要在xml里面声明一个@bean标签 然后使用@component 注解来申明写@bean注解的这个java。而且这个不能使用@configuration这个注解<br>只要一使用这个注解就会找不到注入的方法。及时是这个方法我也弄了好久才找到的。因为注入的方法有点多，而我又在怀疑是不是我的方法有问题，<br>当我把官网的例子拿出来发现也不行的时候我就开始有着死马活马医的心态了。</p>
-<h3 id="如何依赖"><a href="#如何依赖" class="headerlink" title="如何依赖"></a>如何依赖</h3><p>虽然可以注入想要类型的bean了那么最大的一个问题来了，如何依赖呢？因为我们直接用的这个bean是没有上下文的，也就无法真正的起作用，于是我开始<br>使用ApplicationContext来获取上下文来获取对应的bean后注入，也是报了一堆错误，因为不能将他们一起初始化，ApplicationContext需要单独拿出来<br>写成静态工具类，还要保证对应的初始化顺序，这个简单，使用了个@dependOn注解即可。最后试了一把，居然真可以按着预期的运行。这个班没有白加。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>老项目的维护还是需要耐心，要懂得现在的技术封装如此高级，我们最好能使用原来的老技术也可以实现！这个确实是一个比较难得的能力！</p>
+                <h3 id="能活下来的老项目是宝"><a href="#能活下来的老项目是宝" class="headerlink" title="能活下来的老项目是宝"></a>能活下来的老项目是宝</h3><p>我们不可能一直是使用最新的技术，是项目总会成为过去，而项目能活下来也是不容易的,都是有他的价值的，而这个时候如果让你顶上去维护老项目你能行么。</p>
+<h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>最近由于技术栈的变更, 也就是从activeMq转变为rabbitMQ这一块，项目先是出了一个bug，是有关延时队列的使用：由于rabbiMq的延时队列是使用死信队列实现的，而这个队列是一个单向阻塞队列，如果一个延时长的任务先入队，那么后面延时短的任务要等到前面的元素出队列以后才能继续出队。这样会造成后面消息无法按时出队,于是网上搜索了下解决方案，很快就搜索到了，使用一个rabbitMq延时插件可以实现想要的功能，但是问题却也随之来了</p>
+<h3 id="springFramework3-1老项目"><a href="#springFramework3-1老项目" class="headerlink" title="springFramework3.1老项目"></a>springFramework3.1老项目</h3><p>老项目的配置都是使用xml维护的，而网上的解决方案都是基于springboot的解决方案，spring Framework的解决延时队列的方案我是没有找到 于是我只好将对应配置的配置项的xml标签都看了一遍，根本就没有对应解决方案的标签CustomExchange，于是我想着使用@bean 标签去注入，结果发现无法注入， 因为这个spring的版本太低了，于是到<a href="https://docs.spring.io/spring/docs/3.1.1.RELEASE/spring-framework-reference/html/" target="_blank" rel="noopener">官方文档</a> 查看了下相关的资料，发现这个版本是刚刚出 @bean 这个注解的时候，这个时候的这个注解功能还处于特别低级的情况。 因为官方文档上面写的基本都还是在使用xml配置。这个时候是我们熟知的@bean @configuration注解刚刚出道的时候。</p>
+<h3 id="无法注入"><a href="#无法注入" class="headerlink" title="无法注入"></a>无法注入</h3><p>我按照官网的方法使用@configuration 和@bean 去注入，都没法注入bean，启动的时候一直报无法找到factory method异常导致的无法启动，<br>于是我开始仔细看这两个注解目前版本的的功能究竟是什么，结果是这样的：</p>
+<blockquote>
+<p>@configuration注解基本没什么用处,因为你要使用的话的需要用注解扫描的方式启动项目才可以</p>
+</blockquote>
+<p>直到后来我将注意力转移到@bean的使用的时候看到一句话：  </p>
+<blockquote>
+<p>4.12.4 Using the @Bean annotation<br>@Bean is a method-level annotation and a direct analog of the XML <bean> element.<br>The annotation supports some of the attributes offered by <bean>, such as: init-method, destroy-method, autowiring and name.<br>You can use the @Bean annotation in a @Configuration-annotated or in a @Component-annotated class.  </bean></bean></p>
+</blockquote>
+<p>答案在最后面一句上：你也可以使用@Component注解的java类上使用@bean注解，<br>我这样做了之后还是没有注入我想要的自定义的bean，于是我推测既然是基于xml扫描的配置启动是不是还要在xml里面声明一下这个java类，<br>声明之后终于可以按预期run起来了。而且可以完好的依赖成功后运行处想要的效果，到此，终于解决了这个问题。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>虽然最后的解决方案，看上去还是比较简单的，但是总不可能凭空产生这样的结果，当我们网上搜索不到答案的时候，也要冷静来认真分析问题，<br>不要仅限于当前springboot的如此方便的技术，还要知道对应原理，历史来源，这样才不至于遇到baidu或者google不到的问题就放弃了。</p>
 
             </div>
             <hr>
@@ -501,24 +508,23 @@
     <div class="row article-row">
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">本篇</div>
+            <div class="article-badge left-badge text-color">上一篇</div>
             <div class="card">
-                <a href="/2019/09/05/springframework3-1-zhe-yang-de-lao-ban-ben-zen-me-wei-hu-a/">
+                <a href="/2019/09/12/hao-liao-zhe-xia-bai-du-bu-dao-liao-zen-me-ban/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="springFramework3.1这样的老版本怎么维护啊？">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="好了，这下百度(google)不到了怎么办？">
                         
-                        <span class="card-title">springFramework3.1这样的老版本怎么维护啊？</span>
+                        <span class="card-title">好了，这下百度(google)不到了怎么办？</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">能活下来的老项目是宝我们不可能一直是使用最新的技术，是项目总会成为过去，而项目能活下来也是不容易的,都是有他的价值的，而这个时候如果让你顶上去维护老项目你能行么？真的，你能行么？
-起因最近项目先是出了一个bug，是由于技术栈的变更导致的，也</div>
+                    <div class="summary">我想说突然觉得作为一名程序员要面对的东西好多啊,不仅要时刻学习日新月异新的技术栈,还要兼顾老的技术，维护项目， 这不公司技术栈的迁移变更遇到了一堆问题，不知道是不幸还是有幸，这个活落到我头上了。况且我对这个项目一点不了解， 可是没有可是，必</div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-05
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-12
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -527,16 +533,15 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/springFramework3-1/" target="_blank">
-                        <span class="chip bg-color">springFramework3.1</span>
+                    <a href="/tags/springboot/" target="_blank">
+                        <span class="chip bg-color">springboot</span>
                     </a>
                     
-                    <a href="/tags/rabbitMq/" target="_blank">
-                        <span class="chip bg-color">rabbitMq</span>
+                    <a href="/tags/springCloud/" target="_blank">
+                        <span class="chip bg-color">springCloud</span>
                     </a>
                     
                 </div>
