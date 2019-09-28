@@ -432,7 +432,7 @@
             <div id="articleContent">
                 <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>最近负责改造公司的老项目到新的技术栈(springboot2.0X)的时候遇到了一个特别尴尬的问题，就是dubbo的配置文件无法使用占位符来注入,这样会导致无论测试还是生产，每次发版的时候都需要改一下，很显然，这样特别不优雅。</p>
 <h3 id="探索"><a href="#探索" class="headerlink" title="探索"></a>探索</h3><p>终于等到项目整合的末期只剩这个不算bug的bug了，我下定决心打算解决它，于是探索之旅开始了，先是一番老操作：一顿百度google，结果是：只看到有相同提问的却没有一个解答的。 (百度出来也不会写博客了)</p>
-<h3 id="springFramework3-1和springboot的对于占位符解析的区别"><a href="#springFramework3-1和springboot的对于占位符解析的区别" class="headerlink" title="springFramework3.1和springboot的对于占位符解析的区别."></a>springFramework3.1和springboot的对于占位符解析的区别.</h3><p>由于最近也在看spring源码这一块的东西，刚好用上了，老系统springFramework在启动的时候是先读取xml配置文件,<br>接着读取properties文件，并解析占位符，然后才会开始注册beanDefinitions,在实例化之前属性其实就已经解析完了。<br>实例化接着初始化复制后连接注册中心,然后开始的其他操作。<br>而springboot官方文档里面有这样一段话：</p>
+<h3 id="springFramework3-1和springboot的对于占位符解析的区别"><a href="#springFramework3-1和springboot的对于占位符解析的区别" class="headerlink" title="springFramework3.1和springboot的对于占位符解析的区别."></a>springFramework3.1和springboot的对于占位符解析的区别.</h3><p>由于最近也在看spring源码这一块的东西，刚好用上了，老系统springFramework在启动的时候是先读取xml配置文件, 接着读取properties文件，并解析占位符，然后才会开始注册beanDefinitions,在实例化之前属性其实就已经解析完了。 实例化接着初始化复制后连接注册中心,然后开始的其他操作。 而springboot官方文档里面有这样一段话：</p>
 <blockquote>
 <p>Caution<br>While using @PropertySource on your @SpringBootApplication may seem to be a<br>convenient and easy way to load a custom resource in the Environment, we do not recommend<br>it, because Spring Boot prepares the Environment before the ApplicationContext is<br>refreshed. Any key defined with @PropertySource is loaded too late to have any effect on auto configuration.</p>
 </blockquote>
