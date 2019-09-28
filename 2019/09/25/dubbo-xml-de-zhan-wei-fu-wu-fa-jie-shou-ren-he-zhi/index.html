@@ -462,7 +462,7 @@
 
 <span class="token punctuation">}</span>
 </code></pre>
-<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>我们可以通过这个接口来覆盖对应的值，在beanDefinition被实例化之前将对应的值从Environment取出来放入即可放，也就是：</p>
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>我们可以通过这个接口来覆盖对应的值，在beanDefinition被实例化之前将对应的值从Environment取出来，然后将address,group这两个值覆盖即可，也就是：</p>
 <pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Component</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DubboRegistryOverride</span> <span class="token keyword">implements</span> <span class="token class-name">BeanDefinitionRegistryPostProcessor</span><span class="token punctuation">,</span> EnvironmentAware <span class="token punctuation">{</span>
 
@@ -480,9 +480,9 @@
         String address <span class="token operator">=</span> ENV<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">"dubbo.address"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         String group <span class="token operator">=</span> ENV<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">"dubbo.group"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         MutablePropertyValues propertyValues <span class="token operator">=</span> registryConfig<span class="token punctuation">.</span><span class="token function">getPropertyValues</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">// 覆盖对应key的占位符</span>
-        propertyValues<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"${dubbo.address}"</span><span class="token punctuation">,</span> address<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        propertyValues<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"${dubbo.group}"</span><span class="token punctuation">,</span> group<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 覆盖对应key的值</span>
+        propertyValues<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"address"</span><span class="token punctuation">,</span> address<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        propertyValues<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"group"</span><span class="token punctuation">,</span> group<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 
     <span class="token annotation punctuation">@Override</span>
