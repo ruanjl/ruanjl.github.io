@@ -458,11 +458,13 @@
      * @param registry the bean definition registry used by the application context
      * @throws org.springframework.beans.BeansException in case of errors
      */</span>
+    <span class="token comment" spellcheck="true">// 这里就是最关键的地方了，这个方法会在bean definition初始化完成之后，但是还没有任何bean被初始化(initializbean)</span>
+    <span class="token comment" spellcheck="true">// 这个方法允许我们对已经注册了的所有bean definition进行额外的操作。</span>
     <span class="token keyword">void</span> <span class="token function">postProcessBeanDefinitionRegistry</span><span class="token punctuation">(</span>BeanDefinitionRegistry registry<span class="token punctuation">)</span> <span class="token keyword">throws</span> BeansException<span class="token punctuation">;</span>
 
 <span class="token punctuation">}</span>
 </code></pre>
-<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>我们可以通过这个接口来覆盖对应的值，在beanDefinition被实例化之前将对应的值从Environment取出来，然后将address,group这两个值覆盖即可，也就是：</p>
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>可以通过对应的接口来修改bean实例化之前(beanDefinition, beanFactory)的对应的属性值，两个选一个即可，也就是：</p>
 <pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Component</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DubboRegistryOverride</span> <span class="token keyword">implements</span> <span class="token class-name">BeanDefinitionRegistryPostProcessor</span><span class="token punctuation">,</span> EnvironmentAware <span class="token punctuation">{</span>
 
@@ -487,6 +489,11 @@
 
     <span class="token annotation punctuation">@Override</span>
     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">postProcessBeanFactory</span><span class="token punctuation">(</span>ConfigurableListableBeanFactory beanFactory<span class="token punctuation">)</span> <span class="token keyword">throws</span> BeansException <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 或者使用BeanFactoryPostProcessor对应的beanFactory里面的值</span>
+        RegistryConfig registryConfig <span class="token operator">=</span> beanFactory<span class="token punctuation">.</span><span class="token function">getBean</span><span class="token punctuation">(</span>RegistryConfig<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 直接获取到对应的dubbo配置即可</span>
+        registryConfig<span class="token punctuation">.</span><span class="token function">setAddress</span><span class="token punctuation">(</span>ENV<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">"dubbo.group"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        registryConfig<span class="token punctuation">.</span><span class="token function">setGroup</span><span class="token punctuation">(</span>ENV<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">"dubbo.group"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
