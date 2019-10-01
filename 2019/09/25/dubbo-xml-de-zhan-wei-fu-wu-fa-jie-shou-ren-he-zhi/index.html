@@ -464,7 +464,7 @@
 
 <span class="token punctuation">}</span>
 </code></pre>
-<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>可以通过对应的接口来修改bean实例化之前(beanDefinition, beanFactory)的对应的属性值，两个选一个即可，也就是：</p>
+<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>spring的bean在真正的初始化之前有两个重要的扩展点,使得框架更加灵活,通过实现指定的扩展点接口我们可以修改bean实例化之前(beanDefinition, beanFactory)的对应的属性值，从而来改变实例化的时候属性的值:</p>
 <pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Component</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DubboRegistryOverride</span> <span class="token keyword">implements</span> <span class="token class-name">BeanDefinitionRegistryPostProcessor</span><span class="token punctuation">,</span> EnvironmentAware <span class="token punctuation">{</span>
 
