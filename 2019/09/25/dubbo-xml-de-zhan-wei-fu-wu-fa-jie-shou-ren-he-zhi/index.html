@@ -431,9 +431,9 @@
             <div id="articleContent">
                 <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>最近负责改造公司的老项目到新的技术栈springCloud(springboot2.0X)的时候遇到了一个特别尴尬的问题，就是dubbo的配置文件无法使用占位符来注入,这样会导致无论测试还是生产，每次发版的时候都需要改一下，很显然，这样特别不优雅。</p>
 <h3 id="探索"><a href="#探索" class="headerlink" title="探索"></a>探索</h3><p>终于等到项目整合的末期只剩这个不算bug的bug了，我下定决心打算解决它，于是探索之旅开始了，先是一番老操作：一顿百度google，结果是：只看到有相同提问的却没有一个解答的。(百度出来也不会写博客了)</p>
-<h3 id="老项目的占位符是这样生效的"><a href="#老项目的占位符是这样生效的" class="headerlink" title="老项目的占位符是这样生效的:"></a>老项目的占位符是这样生效的:</h3><p>随着源码看一下老项目的占位符生效过程，项目启动的时候扫描先扫描xml配置文件，并调用loadBeanDefinitions，后注册beanDefinition：<br><img src="/images/loadBeanDefinitions.png" alt=""><br>在AbstractApplicationContext#refresh中的invokeBeanFactoryPostProcessors会调用PropertyPlaceholderConfigurer的postProcessBeanFactory:<br><img src="/images/invokeBeanFacotryPostProcessors.png" alt=""><br>postProcessBeanFactory方法对占位符进行处理：processProperties将所有beanDefinition的占位符进行替换(具体的就不讲了,就是遍历beanDefinition,逐个访问替换)<br><img src="/images/processProperties.png" alt=""></p>
-<h3 id="PropertyPlaceholderConfigurer"><a href="#PropertyPlaceholderConfigurer" class="headerlink" title="PropertyPlaceholderConfigurer"></a>PropertyPlaceholderConfigurer</h3><p>下面是PropertyPlaceholderConfigurer这个类的uml图：<br><img src="/images/PropertyPlaceholderConfigurer.png" alt=""> 如果我们配置了properties文件等等的最终是以这个bean的形式注入到容器的。 然后在bean实例化之前refresh方法会调用对应的方法使得占位符生效。</p>
-<h3 id="类比"><a href="#类比" class="headerlink" title="类比"></a>类比</h3><p>本来想着像老项目里面一样注入一个PropertyPlaceholderConfigurer的bean，发现没什么作用。后又用对应的@propertySource发现也没有用，然后直接写在yml里面也没有起作用</p>
+<h3 id="老项目的占位符是这样生效的"><a href="#老项目的占位符是这样生效的" class="headerlink" title="老项目的占位符是这样生效的:"></a>老项目的占位符是这样生效的:</h3><p>随着源码看一下老项目的占位符生效过程，项目启动的时候扫描先扫描xml配置文件，并调用<strong>loadBeanDefinitions</strong>，后注册<strong>beanDefinition</strong>：<br><img src="/images/loadBeanDefinitions.png" alt=""><br>在AbstractApplicationContext#refresh中的invokeBeanFactoryPostProcessors会调用PropertyPlaceholderConfigurer的<strong>postProcessBeanFactory</strong>:<br><img src="/images/invokeBeanFacotryPostProcessors.png" alt=""><br>postProcessBeanFactory方法对占位符进行处理：processProperties方法将所有beanDefinition的占位符进行替换(具体的就不讲了,就是遍历beanDefinition,逐个访问替换)<br><img src="/images/processProperties.png" alt=""></p>
+<h3 id="PropertyPlaceholderConfigurer"><a href="#PropertyPlaceholderConfigurer" class="headerlink" title="PropertyPlaceholderConfigurer"></a>PropertyPlaceholderConfigurer</h3><p>下面是PropertyPlaceholderConfigurer这个类的uml图：<br><img src="/images/PropertyPlaceholderConfigurer.png" alt=""><br>如果我们配置了properties文件等等的最终是以这个bean的形式注入到容器的。然后在refresh方法中bean实例化之前会调用<strong>postProcessBeanFactory</strong>的替换占位符。</p>
+<h3 id="类比"><a href="#类比" class="headerlink" title="类比"></a>类比</h3><p>本来想着像老项目里面一样注入一个PropertyPlaceholderConfigurer的bean，发现没什么作用。后又用对应的@propertySource发现也没有用，然后直接写在yml里面也没有起作用.</p>
 <p><strong>后来看springboot官方文档里面有这样一段话：</strong></p>
 <blockquote>
 <p>Caution<br>While using @PropertySource on your @SpringBootApplication may seem to be a<br>convenient and easy way to load a custom resource in the Environment, we do not recommend<br>it, because Spring Boot prepares the Environment before the ApplicationContext is<br>refreshed. Any key defined with @PropertySource is loaded too late to have any effect on auto configuration.</p>
@@ -443,10 +443,10 @@
 <ol>
 <li>先获取注册中心的注册表</li>
 <li>请求configServer,拉回配置信息</li>
-<li>由RefreshAutoConfiguration的内部类RefreshScopeBeanDefinitionEnhancer进行刷新配置,这个过程中获要工具类型获取Environment,调用getBean(Environment.class);</li>
+<li>由RefreshAutoConfiguration的内部类RefreshScopeBeanDefinitionEnhancer进行刷新配置,这个过程中获要根据类型获取Environment,调用getBean(Environment.class);</li>
 <li>通过类型获取一个bean会导致遍历bean,这个过程会调用到isTypeMatch</li>
 <li>当遍历到dubbo服务的bean(因为dubbo的service都是FactoryBean)时候的doCreateBean需要依赖RegistryConfig,</li>
-<li>dubbo里面的工具类获取:BeanFactoryUtils.beansOfTypeIncludingAncestors(applicationContext, RegistryConfig.class, false, false);而这个时候PropertyPlaceholderConfigurer还没有被调用,导致占位符没有解析连接不上。   </li>
+<li>在初始化bean时候的afterPropertiesSet()方法里面依赖RegistryConfig,的时候抛出异常占位符没有解析无法连接zookeeper导致无法启动。</li>
 </ol>
 <h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>知道原因解决起来就相对简单了，在他调用刷新RefreshScopeBeanDefinitionEnhancer之前先进行占位符解析，可以用spring优先级高的扩展点：</p>
 <pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
@@ -476,7 +476,7 @@
 
 <span class="token punctuation">}</span>
 </code></pre>
-<h3 id="对应代码："><a href="#对应代码：" class="headerlink" title="对应代码："></a>对应代码：</h3><p>相面两个都可以解决问题，只要实现其中一个就可以了。</p>
+<h3 id="对应代码："><a href="#对应代码：" class="headerlink" title="对应代码："></a>对应代码：</h3><p>下面两个实现都可以解决问题，只要实现其中一个就可以了。</p>
 <pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Component</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DubboRegistryOverride</span> <span class="token keyword">implements</span> <span class="token class-name">BeanDefinitionRegistryPostProcessor</span><span class="token punctuation">,</span> EnvironmentAware <span class="token punctuation">{</span>
 
@@ -509,7 +509,7 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h3 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h3><p>解决这个问题其实走了挺多弯路的，特别是最开始百度的时候，没什么思路，随着对问题的一步一步的探究，跟着出问题的源码，在加上对源码的一部分技艺，也找到了解答的方向，最终找到了答案。</p>
+<h3 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h3><p>解决这个问题其实走了挺多弯路的，特别是最开始百度的时候，没什么思路，随着对问题的一步一步的探究，跟着出问题的源码，在加上对源码的一部分记忆，也找到了解答的方向，最终找到了答案。</p>
 
             </div>
             <hr>
