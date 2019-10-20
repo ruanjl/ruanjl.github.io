@@ -5,9 +5,9 @@
   <subtitle>RJL</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://gitee.com/Ruanjl007/"/>
+  <link href="https://ruanjl.coding.net/p/blog/d/blog/git/"/>
   <updated>2019-10-09T13:32:23.464Z</updated>
-  <id>https://gitee.com/Ruanjl007/</id>
+  <id>https://ruanjl.coding.net/p/blog/d/blog/git/</id>
   
   <author>
     <name>江0</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>dubbo.xml的占位符无法接受任何值？</title>
-    <link href="https://gitee.com/Ruanjl007/2019/09/25/dubbo-xml-de-zhan-wei-fu-wu-fa-jie-shou-ren-he-zhi/"/>
-    <id>https://gitee.com/Ruanjl007/2019/09/25/dubbo-xml-de-zhan-wei-fu-wu-fa-jie-shou-ren-he-zhi/</id>
+    <link href="https://ruanjl.coding.net/p/blog/d/blog/git/2019/09/25/dubbo-xml-de-zhan-wei-fu-wu-fa-jie-shou-ren-he-zhi/"/>
+    <id>https://ruanjl.coding.net/p/blog/d/blog/git/2019/09/25/dubbo-xml-de-zhan-wei-fu-wu-fa-jie-shou-ren-he-zhi/</id>
     <published>2019-09-25T12:05:59.000Z</published>
     <updated>2019-10-09T13:32:23.464Z</updated>
     
@@ -36,16 +36,16 @@
     </summary>
     
     
-      <category term="springboot" scheme="https://gitee.com/Ruanjl007/tags/springboot/"/>
+      <category term="springboot" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/tags/springboot/"/>
     
-      <category term="dubbo" scheme="https://gitee.com/Ruanjl007/tags/dubbo/"/>
+      <category term="dubbo" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/tags/dubbo/"/>
     
   </entry>
   
   <entry>
     <title>这下百度(google)不到了吧</title>
-    <link href="https://gitee.com/Ruanjl007/2019/09/12/hao-liao-zhe-xia-bai-du-bu-dao-liao-zen-me-ban/"/>
-    <id>https://gitee.com/Ruanjl007/2019/09/12/hao-liao-zhe-xia-bai-du-bu-dao-liao-zen-me-ban/</id>
+    <link href="https://ruanjl.coding.net/p/blog/d/blog/git/2019/09/12/hao-liao-zhe-xia-bai-du-bu-dao-liao-zen-me-ban/"/>
+    <id>https://ruanjl.coding.net/p/blog/d/blog/git/2019/09/12/hao-liao-zhe-xia-bai-du-bu-dao-liao-zen-me-ban/</id>
     <published>2019-09-12T14:25:30.000Z</published>
     <updated>2019-09-16T13:38:02.883Z</updated>
     
@@ -62,16 +62,16 @@
     </summary>
     
     
-      <category term="springboot" scheme="https://gitee.com/Ruanjl007/tags/springboot/"/>
+      <category term="springboot" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/tags/springboot/"/>
     
-      <category term="springCloud" scheme="https://gitee.com/Ruanjl007/tags/springCloud/"/>
+      <category term="springCloud" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/tags/springCloud/"/>
     
   </entry>
   
   <entry>
     <title>springFramework3.1这样的老版本怎么维护啊？</title>
-    <link href="https://gitee.com/Ruanjl007/2019/09/05/springframework3-1-zhe-yang-de-lao-ban-ben-zen-me-wei-hu-a/"/>
-    <id>https://gitee.com/Ruanjl007/2019/09/05/springframework3-1-zhe-yang-de-lao-ban-ben-zen-me-wei-hu-a/</id>
+    <link href="https://ruanjl.coding.net/p/blog/d/blog/git/2019/09/05/springframework3-1-zhe-yang-de-lao-ban-ben-zen-me-wei-hu-a/"/>
+    <id>https://ruanjl.coding.net/p/blog/d/blog/git/2019/09/05/springframework3-1-zhe-yang-de-lao-ban-ben-zen-me-wei-hu-a/</id>
     <published>2019-09-05T15:08:04.000Z</published>
     <updated>2019-09-14T10:59:27.025Z</updated>
     
@@ -88,16 +88,16 @@
     </summary>
     
     
-      <category term="springFramework3.1" scheme="https://gitee.com/Ruanjl007/tags/springFramework3-1/"/>
+      <category term="springFramework3.1" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/tags/springFramework3-1/"/>
     
-      <category term="rabbitMq" scheme="https://gitee.com/Ruanjl007/tags/rabbitMq/"/>
+      <category term="rabbitMq" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/tags/rabbitMq/"/>
     
   </entry>
   
   <entry>
     <title>强大的正则:带你获取你想要的各种数据</title>
-    <link href="https://gitee.com/Ruanjl007/2019/08/18/qiang-da-de-zheng-ze-dai-ni-huo-qu-ni-xiang-yao-de-ge-chong-shu-ju/"/>
-    <id>https://gitee.com/Ruanjl007/2019/08/18/qiang-da-de-zheng-ze-dai-ni-huo-qu-ni-xiang-yao-de-ge-chong-shu-ju/</id>
+    <link href="https://ruanjl.coding.net/p/blog/d/blog/git/2019/08/18/qiang-da-de-zheng-ze-dai-ni-huo-qu-ni-xiang-yao-de-ge-chong-shu-ju/"/>
+    <id>https://ruanjl.coding.net/p/blog/d/blog/git/2019/08/18/qiang-da-de-zheng-ze-dai-ni-huo-qu-ni-xiang-yao-de-ge-chong-shu-ju/</id>
     <published>2019-08-18T07:51:46.000Z</published>
     <updated>2019-09-05T15:06:45.543Z</updated>
     
@@ -114,14 +114,14 @@
     </summary>
     
     
-      <category term="正则" scheme="https://gitee.com/Ruanjl007/tags/%E6%AD%A3%E5%88%99/"/>
+      <category term="正则" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/tags/%E6%AD%A3%E5%88%99/"/>
     
   </entry>
   
   <entry>
     <title>记一次生产多线程数据导出bug排查</title>
-    <link href="https://gitee.com/Ruanjl007/2019/07/20/ji-yi-ci-sheng-chan-duo-xian-cheng-shu-ju-dao-chu-bug-pai-cha/"/>
-    <id>https://gitee.com/Ruanjl007/2019/07/20/ji-yi-ci-sheng-chan-duo-xian-cheng-shu-ju-dao-chu-bug-pai-cha/</id>
+    <link href="https://ruanjl.coding.net/p/blog/d/blog/git/2019/07/20/ji-yi-ci-sheng-chan-duo-xian-cheng-shu-ju-dao-chu-bug-pai-cha/"/>
+    <id>https://ruanjl.coding.net/p/blog/d/blog/git/2019/07/20/ji-yi-ci-sheng-chan-duo-xian-cheng-shu-ju-dao-chu-bug-pai-cha/</id>
     <published>2019-07-20T07:24:42.000Z</published>
     <updated>2019-09-14T11:10:13.339Z</updated>
     
@@ -138,22 +138,22 @@
     </summary>
     
     
-      <category term="dubbo" scheme="https://gitee.com/Ruanjl007/tags/dubbo/"/>
+      <category term="dubbo" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/tags/dubbo/"/>
     
-      <category term="多线程" scheme="https://gitee.com/Ruanjl007/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+      <category term="多线程" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
-      <category term="并发" scheme="https://gitee.com/Ruanjl007/tags/%E5%B9%B6%E5%8F%91/"/>
+      <category term="并发" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/tags/%E5%B9%B6%E5%8F%91/"/>
     
-      <category term="callable" scheme="https://gitee.com/Ruanjl007/tags/callable/"/>
+      <category term="callable" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/tags/callable/"/>
     
-      <category term="future" scheme="https://gitee.com/Ruanjl007/tags/future/"/>
+      <category term="future" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/tags/future/"/>
     
   </entry>
   
   <entry>
     <title>技术人员有关技能方面的一点感悟</title>
-    <link href="https://gitee.com/Ruanjl007/2019/06/01/ji-zhu-ren-yuan-you-guan-ji-neng-fang-mian-de-yi-dian-gan-wu/"/>
-    <id>https://gitee.com/Ruanjl007/2019/06/01/ji-zhu-ren-yuan-you-guan-ji-neng-fang-mian-de-yi-dian-gan-wu/</id>
+    <link href="https://ruanjl.coding.net/p/blog/d/blog/git/2019/06/01/ji-zhu-ren-yuan-you-guan-ji-neng-fang-mian-de-yi-dian-gan-wu/"/>
+    <id>https://ruanjl.coding.net/p/blog/d/blog/git/2019/06/01/ji-zhu-ren-yuan-you-guan-ji-neng-fang-mian-de-yi-dian-gan-wu/</id>
     <published>2019-06-01T15:42:39.000Z</published>
     <updated>2019-06-01T16:20:09.550Z</updated>
     
@@ -174,8 +174,8 @@
   
   <entry>
     <title>聊聊paxos</title>
-    <link href="https://gitee.com/Ruanjl007/2019/06/01/liao-liao-paxos/"/>
-    <id>https://gitee.com/Ruanjl007/2019/06/01/liao-liao-paxos/</id>
+    <link href="https://ruanjl.coding.net/p/blog/d/blog/git/2019/06/01/liao-liao-paxos/"/>
+    <id>https://ruanjl.coding.net/p/blog/d/blog/git/2019/06/01/liao-liao-paxos/</id>
     <published>2019-06-01T15:27:51.000Z</published>
     <updated>2019-09-14T11:14:43.184Z</updated>
     
@@ -192,16 +192,16 @@
     </summary>
     
     
-      <category term="paxos" scheme="https://gitee.com/Ruanjl007/tags/paxos/"/>
+      <category term="paxos" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/tags/paxos/"/>
     
-      <category term="分布式" scheme="https://gitee.com/Ruanjl007/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
+      <category term="分布式" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>正则完全总结</title>
-    <link href="https://gitee.com/Ruanjl007/2019/06/01/zheng-ze-wan-quan-zong-jie/"/>
-    <id>https://gitee.com/Ruanjl007/2019/06/01/zheng-ze-wan-quan-zong-jie/</id>
+    <link href="https://ruanjl.coding.net/p/blog/d/blog/git/2019/06/01/zheng-ze-wan-quan-zong-jie/"/>
+    <id>https://ruanjl.coding.net/p/blog/d/blog/git/2019/06/01/zheng-ze-wan-quan-zong-jie/</id>
     <published>2019-06-01T06:41:58.000Z</published>
     <updated>2019-06-02T06:43:04.291Z</updated>
     
@@ -218,14 +218,14 @@
     </summary>
     
     
-      <category term="正则" scheme="https://gitee.com/Ruanjl007/tags/%E6%AD%A3%E5%88%99/"/>
+      <category term="正则" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/tags/%E6%AD%A3%E5%88%99/"/>
     
   </entry>
   
   <entry>
     <title>读 Designing Data-Intensive Application</title>
-    <link href="https://gitee.com/Ruanjl007/2019/02/13/designing-data-intensive-application/"/>
-    <id>https://gitee.com/Ruanjl007/2019/02/13/designing-data-intensive-application/</id>
+    <link href="https://ruanjl.coding.net/p/blog/d/blog/git/2019/02/13/designing-data-intensive-application/"/>
+    <id>https://ruanjl.coding.net/p/blog/d/blog/git/2019/02/13/designing-data-intensive-application/</id>
     <published>2019-02-13T08:57:48.000Z</published>
     <updated>2019-04-26T16:06:56.239Z</updated>
     
@@ -241,17 +241,17 @@
     
     </summary>
     
-      <category term="设计思想" scheme="https://gitee.com/Ruanjl007/categories/%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3/"/>
+      <category term="设计思想" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/categories/%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3/"/>
     
     
-      <category term="阅读" scheme="https://gitee.com/Ruanjl007/tags/%E9%98%85%E8%AF%BB/"/>
+      <category term="阅读" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/tags/%E9%98%85%E8%AF%BB/"/>
     
   </entry>
   
   <entry>
     <title>位运算的那些骚操作</title>
-    <link href="https://gitee.com/Ruanjl007/2019/01/28/wei-yun-suan-de-na-xie-sao-cao-zuo/"/>
-    <id>https://gitee.com/Ruanjl007/2019/01/28/wei-yun-suan-de-na-xie-sao-cao-zuo/</id>
+    <link href="https://ruanjl.coding.net/p/blog/d/blog/git/2019/01/28/wei-yun-suan-de-na-xie-sao-cao-zuo/"/>
+    <id>https://ruanjl.coding.net/p/blog/d/blog/git/2019/01/28/wei-yun-suan-de-na-xie-sao-cao-zuo/</id>
     <published>2019-01-28T04:58:21.000Z</published>
     <updated>2019-01-30T04:59:34.132Z</updated>
     
@@ -267,19 +267,19 @@
     
     </summary>
     
-      <category term="算法" scheme="https://gitee.com/Ruanjl007/categories/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="算法" scheme="https://gitee.com/Ruanjl007/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="leetcode" scheme="https://gitee.com/Ruanjl007/tags/leetcode/"/>
+      <category term="leetcode" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/tags/leetcode/"/>
     
   </entry>
   
   <entry>
     <title>红黑树在jdk中的实现</title>
-    <link href="https://gitee.com/Ruanjl007/2019/01/26/hong-hei-shu-rbtree-zai-jdk-zhong-de-shi-xian/"/>
-    <id>https://gitee.com/Ruanjl007/2019/01/26/hong-hei-shu-rbtree-zai-jdk-zhong-de-shi-xian/</id>
+    <link href="https://ruanjl.coding.net/p/blog/d/blog/git/2019/01/26/hong-hei-shu-rbtree-zai-jdk-zhong-de-shi-xian/"/>
+    <id>https://ruanjl.coding.net/p/blog/d/blog/git/2019/01/26/hong-hei-shu-rbtree-zai-jdk-zhong-de-shi-xian/</id>
     <published>2019-01-26T02:51:33.000Z</published>
     <updated>2019-02-20T15:39:24.110Z</updated>
     
@@ -295,17 +295,17 @@
     
     </summary>
     
-      <category term="数据结构" scheme="https://gitee.com/Ruanjl007/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     
-      <category term="数据结构" scheme="https://gitee.com/Ruanjl007/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
   <entry>
     <title>查快改慢B+树,改快查慢LSM树</title>
-    <link href="https://gitee.com/Ruanjl007/2019/01/23/cha-kuai-gai-man-b-shu-gai-kuai-cha-man-lsm-shu/"/>
-    <id>https://gitee.com/Ruanjl007/2019/01/23/cha-kuai-gai-man-b-shu-gai-kuai-cha-man-lsm-shu/</id>
+    <link href="https://ruanjl.coding.net/p/blog/d/blog/git/2019/01/23/cha-kuai-gai-man-b-shu-gai-kuai-cha-man-lsm-shu/"/>
+    <id>https://ruanjl.coding.net/p/blog/d/blog/git/2019/01/23/cha-kuai-gai-man-b-shu-gai-kuai-cha-man-lsm-shu/</id>
     <published>2019-01-23T03:47:24.000Z</published>
     <updated>2019-01-26T14:21:27.739Z</updated>
     
@@ -321,23 +321,23 @@
     
     </summary>
     
-      <category term="mysql" scheme="https://gitee.com/Ruanjl007/categories/mysql/"/>
+      <category term="mysql" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/categories/mysql/"/>
     
-      <category term="数据结构" scheme="https://gitee.com/Ruanjl007/categories/mysql/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/categories/mysql/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
     
-      <category term="数据结构" scheme="https://gitee.com/Ruanjl007/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
-      <category term="mysql" scheme="https://gitee.com/Ruanjl007/tags/mysql/"/>
+      <category term="mysql" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/tags/mysql/"/>
     
-      <category term="索引" scheme="https://gitee.com/Ruanjl007/tags/%E7%B4%A2%E5%BC%95/"/>
+      <category term="索引" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/tags/%E7%B4%A2%E5%BC%95/"/>
     
   </entry>
   
   <entry>
     <title>分布式锁究竟应该怎么实现？</title>
-    <link href="https://gitee.com/Ruanjl007/2019/01/22/jiu-jing-ying-gai-zen-me-shi-xian-fen-bu-shi-suo/"/>
-    <id>https://gitee.com/Ruanjl007/2019/01/22/jiu-jing-ying-gai-zen-me-shi-xian-fen-bu-shi-suo/</id>
+    <link href="https://ruanjl.coding.net/p/blog/d/blog/git/2019/01/22/jiu-jing-ying-gai-zen-me-shi-xian-fen-bu-shi-suo/"/>
+    <id>https://ruanjl.coding.net/p/blog/d/blog/git/2019/01/22/jiu-jing-ying-gai-zen-me-shi-xian-fen-bu-shi-suo/</id>
     <published>2019-01-22T13:54:06.000Z</published>
     <updated>2019-09-14T11:14:02.913Z</updated>
     
@@ -353,17 +353,17 @@
     
     </summary>
     
-      <category term="分布式" scheme="https://gitee.com/Ruanjl007/categories/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
+      <category term="分布式" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/categories/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
     
     
-      <category term="分布式" scheme="https://gitee.com/Ruanjl007/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
+      <category term="分布式" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>限流方案对比</title>
-    <link href="https://gitee.com/Ruanjl007/2019/01/21/xian-liu-fang-an-dui-bi/"/>
-    <id>https://gitee.com/Ruanjl007/2019/01/21/xian-liu-fang-an-dui-bi/</id>
+    <link href="https://ruanjl.coding.net/p/blog/d/blog/git/2019/01/21/xian-liu-fang-an-dui-bi/"/>
+    <id>https://ruanjl.coding.net/p/blog/d/blog/git/2019/01/21/xian-liu-fang-an-dui-bi/</id>
     <published>2019-01-21T10:57:53.000Z</published>
     <updated>2019-09-14T11:15:22.927Z</updated>
     
@@ -379,17 +379,17 @@
     
     </summary>
     
-      <category term="分布式" scheme="https://gitee.com/Ruanjl007/categories/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
+      <category term="分布式" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/categories/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
     
     
-      <category term="分布式" scheme="https://gitee.com/Ruanjl007/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
+      <category term="分布式" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>springMVC 源码自探</title>
-    <link href="https://gitee.com/Ruanjl007/2019/01/17/springmvc-yuan-ma-zi-tan/"/>
-    <id>https://gitee.com/Ruanjl007/2019/01/17/springmvc-yuan-ma-zi-tan/</id>
+    <link href="https://ruanjl.coding.net/p/blog/d/blog/git/2019/01/17/springmvc-yuan-ma-zi-tan/"/>
+    <id>https://ruanjl.coding.net/p/blog/d/blog/git/2019/01/17/springmvc-yuan-ma-zi-tan/</id>
     <published>2019-01-17T07:28:30.000Z</published>
     <updated>2019-04-20T10:57:29.880Z</updated>
     
@@ -405,19 +405,19 @@
     
     </summary>
     
-      <category term="springMVC" scheme="https://gitee.com/Ruanjl007/categories/springMVC/"/>
+      <category term="springMVC" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/categories/springMVC/"/>
     
     
-      <category term="源码" scheme="https://gitee.com/Ruanjl007/tags/%E6%BA%90%E7%A0%81/"/>
+      <category term="源码" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/tags/%E6%BA%90%E7%A0%81/"/>
     
-      <category term="springMVC" scheme="https://gitee.com/Ruanjl007/tags/springMVC/"/>
+      <category term="springMVC" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/tags/springMVC/"/>
     
   </entry>
   
   <entry>
     <title>QuickSort Application in java</title>
-    <link href="https://gitee.com/Ruanjl007/2018/11/25/jdk-de-kuai-su-pai-xu/"/>
-    <id>https://gitee.com/Ruanjl007/2018/11/25/jdk-de-kuai-su-pai-xu/</id>
+    <link href="https://ruanjl.coding.net/p/blog/d/blog/git/2018/11/25/jdk-de-kuai-su-pai-xu/"/>
+    <id>https://ruanjl.coding.net/p/blog/d/blog/git/2018/11/25/jdk-de-kuai-su-pai-xu/</id>
     <published>2018-11-25T15:07:22.000Z</published>
     <updated>2019-08-18T07:36:49.022Z</updated>
     
@@ -433,10 +433,10 @@
     
     </summary>
     
-      <category term="算法" scheme="https://gitee.com/Ruanjl007/categories/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="Algorithm" scheme="https://gitee.com/Ruanjl007/tags/Algorithm/"/>
+      <category term="Algorithm" scheme="https://ruanjl.coding.net/p/blog/d/blog/git/tags/Algorithm/"/>
     
   </entry>
   
